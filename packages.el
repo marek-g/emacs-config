@@ -49,8 +49,16 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+
 ;;
 ;; Popup menu on right mouse button
 ;;
 
 (package! popup-edit-menu)
+
+
+;;
+;; Modern key-bindings (ctrl+c, ctrl+v, ctrl+s, ctrl+a etc.)
+;;
+
+(package! wakib-keys)
