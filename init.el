@@ -14,6 +14,13 @@
 ;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
+;;
+;; Remap doom/evil switch mode key from C-z to C-<tab>
+;; and set emacs mode as default.
+;;
+(setq evil-toggle-key "C-<tab>")
+(setq evil-default-state 'emacs)
+
 (doom! :input
        ;;chinese
        ;;japanese
