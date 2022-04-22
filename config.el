@@ -91,3 +91,12 @@
 
 ; initial size
 (setq treemacs-width 30)
+
+
+;;
+;; Popup menu on right mouse button
+;;
+
+(use-package! popup-edit-menu
+  :config
+  (global-set-key [mouse-3] (popup-edit-menu-stub)))
