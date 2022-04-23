@@ -120,3 +120,43 @@
   (define-key isearch-mode-map (kbd "M-:") 'isearch-repeat-backward)
   (define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
   (define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char))
+
+;;
+;; Switch active window (ctrl+<tab>)
+;;
+
+(global-set-key (kbd "C-<tab>") 'ace-window)
+
+
+;;
+;; Fix terminal colors with doom and emacs 28
+;; (without it for example ledger reports had wrong colors)
+;;
+
+(custom-set-faces
+ `(ansi-color-black ((t (:foreground ,(doom-color 'bg)))))
+ `(ansi-color-red ((t (:foreground ,(doom-color 'red)))))
+ `(ansi-color-green ((t (:foreground ,(doom-color 'green)))))
+ `(ansi-color-yellow ((t (:foreground ,(doom-color 'yellow)))))
+ `(ansi-color-blue ((t (:foreground ,(doom-color 'blue)))))
+ `(ansi-color-magenta ((t (:foreground ,(doom-color 'magenta)))))
+ `(ansi-color-cyan ((t (:foreground ,(doom-color 'cyan)))))
+ `(ansi-color-gray ((t (:foreground ,(doom-color 'fg)))))
+ `(ansi-color-bright-black ((t (:foreground ,(doom-color 'bg)))))
+ `(ansi-color-bright-red ((t (:foreground ,(doom-color 'red)))))
+ `(ansi-color-bright-green ((t (:foreground ,(doom-color 'green)))))
+ `(ansi-color-bright-yellow ((t (:foreground ,(doom-color 'yellow)))))
+ `(ansi-color-bright-blue ((t (:foreground ,(doom-color 'blue)))))
+ `(ansi-color-bright-magenta ((t (:foreground ,(doom-color 'magenta)))))
+ `(ansi-color-bright-cyan ((t (:foreground ,(doom-color 'cyan))))))
+
+
+;;
+;; Miscellaneous
+;;
+
+; enable long line wrapping
+(global-visual-line-mode t)
+
+; enable line numbers
+;(global-linum-mode t)
