@@ -83,17 +83,6 @@
 
 
 ;;
-;; treemacs configuration
-;;
-
-; allow resizing
-(setq treemacs-width-is-initially-locked nil)
-
-; initial size
-(setq treemacs-width 30)
-
-
-;;
 ;; Popup menu on right mouse button
 ;;
 
@@ -160,3 +149,29 @@
 
 ; enable line numbers
 ;(global-linum-mode t)
+
+
+;;
+;; treemacs configuration
+;;
+
+; allow resizing
+(setq treemacs-width-is-initially-locked nil)
+
+; initial size
+(setq treemacs-width 30)
+
+
+;;
+;; Leger-mode configuration
+;;
+
+(setq ledger-reconcile-default-commodity "PLN")
+
+(setq ledger-reports
+  '(("Balance PLN - Aktywa" "%(binary) -w -f %(ledger-file) -X PLN balance ^Aktywa")
+    ("Balance PLN - Wszystko" "%(binary) -w -f %(ledger-file) -X PLN balance")
+    ("Balance - Wszystko" "%(binary) -f %(ledger-file) balance")
+    ("reg" "%(binary) -f %(ledger-file) reg")
+    ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
+    ("account" "%(binary) -f %(ledger-file) reg %(account)")))
