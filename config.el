@@ -144,8 +144,8 @@
 ;; Miscellaneous
 ;;
 
-; enable long line wrapping
-(global-visual-line-mode t)
+(setq-default indent-tabs-mode t) ; enable tabs
+(global-visual-line-mode t) ; enable long line wrapping
 
 ; enable line numbers
 ;(global-linum-mode t)
