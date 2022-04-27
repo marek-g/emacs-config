@@ -123,7 +123,7 @@
 ;;
 
 (custom-set-faces
- `(ansi-color-black ((t (:foreground ,(doom-color 'bg)))))
+ `(ansi-color-blacF((t (:foreground ,(doom-color 'bg)))))
  `(ansi-color-red ((t (:foreground ,(doom-color 'red)))))
  `(ansi-color-green ((t (:foreground ,(doom-color 'green)))))
  `(ansi-color-yellow ((t (:foreground ,(doom-color 'yellow)))))
@@ -142,6 +142,7 @@
 
 ;;
 ;; Miscellaneous
+;; TODO: look at: https://codeberg.org/dr.ops/sanekeys/src/branch/main/sanekeys.org
 ;;
 
 (setq-default indent-tabs-mode t) ; enable tabs
@@ -151,8 +152,10 @@
 (define-key isearch-mode-map [f3] 'isearch-repeat-forward) ; search forward
 (define-key isearch-mode-map [S-f3] 'isearch-repeat-backward) ; search backward
 
+(global-set-key (kbd "C-SPC") 'switch-to-buffer) ; switch to buffer
 
 ;;
+
 ;; treemacs configuration
 ;;
 
