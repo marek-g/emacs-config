@@ -99,16 +99,7 @@
   :config
   (wakib-keys 1)
   (add-hook 'after-change-major-mode-hook 'wakib-update-major-mode-map)
-  (add-hook 'menu-bar-update-hook 'wakib-update-minor-mode-maps)
-  ;; Modifying other modules
-  ;; When remap is used it exits isearch abruptly after first instance
-  ;; Use explicit keybindings instead
-  (define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
-  (define-key isearch-mode-map (kbd "C-S-f") 'isearch-repeat-backward)
-  (define-key isearch-mode-map (kbd "M-;") 'isearch-repeat-forward)
-  (define-key isearch-mode-map (kbd "M-:") 'isearch-repeat-backward)
-  (define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
-  (define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char))
+  (add-hook 'menu-bar-update-hook 'wakib-update-minor-mode-maps))
 
 ;;
 ;; Switch active window (ctrl+<tab>)
@@ -149,10 +140,17 @@
 (global-visual-line-mode t) ; enable long line wrapping
 ;(global-linum-mode t) ; enable line numbers
 
-(define-key isearch-mode-map [f3] 'isearch-repeat-forward) ; search forward
-(define-key isearch-mode-map [S-f3] 'isearch-repeat-backward) ; search backward
+(define-key isearch-mode-map (kbd "C-f") 'isearch-forward)
+(define-key isearch-mode-map (kbd "M-f") 'isearch-forward-regexp)
+(define-key isearch-mode-map (kbd "<f3>") 'isearch-repeat-forward)
+(define-key isearch-mode-map (kbd "S-<f3>") 'isearch-repeat-backward)
+(define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
+(define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
 
 (global-set-key (kbd "C-SPC") 'switch-to-buffer) ; switch to buffer
+
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+(setq mouse-wheel-progressive-speed nil)
 
 ;;
 
