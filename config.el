@@ -146,9 +146,10 @@
 
 (setq-default indent-tabs-mode t) ; enable tabs
 (global-visual-line-mode t) ; enable long line wrapping
+;(global-linum-mode t) ; enable line numbers
 
-; enable line numbers
-;(global-linum-mode t)
+(define-key isearch-mode-map [f3] 'isearch-repeat-forward) ; search forward
+(define-key isearch-mode-map [S-f3] 'isearch-repeat-backward) ; search backward
 
 
 ;;
