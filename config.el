@@ -144,6 +144,8 @@
 (define-key isearch-mode-map (kbd "M-f") 'isearch-forward-regexp)
 (define-key isearch-mode-map (kbd "<f3>") 'isearch-repeat-forward)
 (define-key isearch-mode-map (kbd "S-<f3>") 'isearch-repeat-backward)
+(define-key isearch-mode-map (kbd "<up>") 'isearch-ring-retreat)
+(define-key isearch-mode-map (kbd "<down>") 'isearch-ring-advance)
 (define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
 (define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
 
