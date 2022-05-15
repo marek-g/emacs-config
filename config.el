@@ -83,6 +83,13 @@
 
 
 ;;
+;; Dashboard customization
+;;
+
+(load! "dashboard.el")
+
+
+;;
 ;; Popup menu on right mouse button
 ;;
 
