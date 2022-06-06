@@ -110,7 +110,13 @@
   ; write & close - this works with commits in magit
   (define-key wakib-keys-overriding-map (kbd "C-w") 'with-editor-finish)
   ; killing the buffer is moved to C-k
-  (define-key wakib-keys-overriding-map (kbd "C-k") 'kill-current-buffer))
+  (define-key wakib-keys-overriding-map (kbd "C-k") 'kill-current-buffer)
+  ; split window horizontally
+  (define-key wakib-keys-overriding-map (kbd "s-h") 'split-window-right)
+  ; split window vertically
+  (define-key wakib-keys-overriding-map (kbd "s-v") 'split-window-below)
+  ; delete window
+  (define-key wakib-keys-overriding-map (kbd "s-x") 'delete-window))
 
 ;;
 ;; Switch active window (ctrl+<tab>)
