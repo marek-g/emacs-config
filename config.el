@@ -204,6 +204,8 @@ If point was already at that position, move point to beginning of line."
 
 (setq ledger-reconcile-default-commodity "PLN")
 
+(setq ledger-post-auto-align nil)
+
 (setq ledger-reports
   '(("Balance PLN - Aktywa" "%(binary) -w -f %(ledger-file) -X PLN balance ^Aktywa")
     ("Balance PLN - Wszystko" "%(binary) -w -f %(ledger-file) -X PLN balance")
