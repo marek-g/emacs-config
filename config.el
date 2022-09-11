@@ -131,7 +131,7 @@
 ;;
 
 (custom-set-faces
- `(ansi-color-blacF((t (:foreground ,(doom-color 'bg)))))
+ `(ansi-color-black ((t (:foreground ,(doom-color 'bg)))))
  `(ansi-color-red ((t (:foreground ,(doom-color 'red)))))
  `(ansi-color-green ((t (:foreground ,(doom-color 'green)))))
  `(ansi-color-yellow ((t (:foreground ,(doom-color 'yellow)))))
