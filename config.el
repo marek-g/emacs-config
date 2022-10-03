@@ -119,6 +119,24 @@
   (define-key wakib-keys-overriding-map (kbd "s-x") 'delete-window))
 
 ;;
+;; vundo (visual undo-tree)
+;;
+(use-package! vundo
+  :config
+  (setq vundo-compact-display t)
+  (setq vundo-glyph-alist vundo-unicode-symbols)
+  (custom-set-faces
+    '(vundo-node ((t (:foreground "#808080"))))
+    '(vundo-stem ((t (:foreground "#808080"))))
+    '(vundo-highlight ((t (:foreground "#FFFF00")))))
+)
+
+; redo
+(global-set-key (kbd "C-S-z") 'vundo)
+(global-set-key (kbd "C-y") 'undo-redo)
+
+
+;;
 ;; Switch active window (ctrl+<tab>)
 ;;
 

@@ -67,3 +67,10 @@
 ;; my fixes for ledger-mode package
 (unpin! ledger-mode)
 (package! ledger-mode :recipe (:host github :repo "marek-g/ledger-mode" :branch "marek"))
+
+
+;;
+;; Vundo (visual undo-tree)
+;;
+
+(package! vundo)
