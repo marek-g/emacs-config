@@ -82,6 +82,7 @@
 ;; External configs
 ;;
 
+(load! "cheatsheet.el")
 (load! "dashboard.el")
 (load! "orgmode.el")
 
