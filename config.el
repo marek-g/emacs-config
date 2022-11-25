@@ -82,7 +82,6 @@
 ;; External configs
 ;;
 
-; dashboard customization
 (load! "dashboard.el")
 (load! "orgmode.el")
 
