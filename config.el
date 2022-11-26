@@ -114,7 +114,7 @@
   ; split window vertically
   (define-key wakib-keys-overriding-map (kbd "s-v") 'split-window-below)
   ; delete window
-  (define-key wakib-keys-overriding-map (kbd "s-x") 'delete-window))
+  (define-key wakib-keys-overriding-map (kbd "s-k") 'delete-window))
 
 ;;
 ;; vundo (visual undo-tree)

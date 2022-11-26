@@ -2,6 +2,57 @@
 
 (define-key global-map [f1] 'cheatsheet-toggle-window)
 
-(cheatsheet-add :group 'Common
-                :key "C-x C-c"
-                :description "leave Emacs.")
+(cheatsheet-add :group 'Help
+                :key "C-h"
+                :description "Emacs' help.")
+
+(cheatsheet-add :group 'Help
+                :key "F1"
+                :description "show / hide help cheatsheet.")
+
+
+(cheatsheet-add :group "Text Edit"
+                :key "C-S-z"
+                :description "vundo (undo tree).")
+
+(cheatsheet-add :group "Text Edit"
+                :key "C-y"
+                :description "redo.")
+
+(cheatsheet-add :group "Text Edit"
+                :key "C-z"
+                :description "undo.")
+
+
+(cheatsheet-add :group "Window management"
+                :key "C-tab"
+                :description "switch active window.")
+
+(cheatsheet-add :group "Window management"
+                :key "s-k"
+                :description "close window.")
+
+(cheatsheet-add :group "Window management"
+                :key "s-h"
+                :description "split window vertically.")
+
+(cheatsheet-add :group "Window management"
+                :key "s-h"
+                :description "split window horizontally.")
+
+
+(cheatsheet-add :group "Search"
+                :key "C-F3"
+                :description "exit search mode.")
+
+(cheatsheet-add :group "Search"
+                :key "S-F3"
+                :description "search repeat backward.")
+
+(cheatsheet-add :group "Search"
+                :key "F3"
+                :description "search repeat forward.")
+
+(cheatsheet-add :group "Search"
+                :key "C-f"
+                :description "search.")
