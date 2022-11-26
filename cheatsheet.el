@@ -24,23 +24,6 @@
                 :description "undo.")
 
 
-(cheatsheet-add :group "Window management"
-                :key "C-tab"
-                :description "switch active window.")
-
-(cheatsheet-add :group "Window management"
-                :key "s-k"
-                :description "close window.")
-
-(cheatsheet-add :group "Window management"
-                :key "s-h"
-                :description "split window vertically.")
-
-(cheatsheet-add :group "Window management"
-                :key "s-h"
-                :description "split window horizontally.")
-
-
 (cheatsheet-add :group "Search"
                 :key "C-F3"
                 :description "exit search mode.")
@@ -56,3 +39,29 @@
 (cheatsheet-add :group "Search"
                 :key "C-f"
                 :description "search.")
+
+(cheatsheet-add :group "Window management"
+                :key "C-tab"
+                :description "switch active window.")
+
+(cheatsheet-add :group "Window management"
+                :key "s-k"
+                :description "close window.")
+
+
+(cheatsheet-add :group "Buffers"
+                :key "C-space, C-b"
+                :description "switch buffer.")
+
+(cheatsheet-add :group "Buffers"
+                :key "C-n"
+                :description "new buffer.")
+
+
+(cheatsheet-add :group "Window management"
+                :key "s-v"
+                :description "split window vertically.")
+
+(cheatsheet-add :group "Window management"
+                :key "s-h"
+                :description "split window horizontally.")
