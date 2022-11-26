@@ -24,6 +24,19 @@
                 :description "undo.")
 
 
+(cheatsheet-add :group "Macros"
+                :key "(C-u N) C-e e"
+                :description "execute keyboard macro (optionally repeat N times, where N = 0 - till EOF).")
+
+(cheatsheet-add :group "Macros"
+                :key "C-e )"
+                :description "stop recording keyboard macro.")
+
+(cheatsheet-add :group "Macros"
+                :key "C-e ("
+                :description "start recording keyboard macro.")
+
+
 (cheatsheet-add :group "Search"
                 :key "C-F3"
                 :description "exit search mode.")
