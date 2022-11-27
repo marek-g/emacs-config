@@ -77,7 +77,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-
 ;;
 ;; External configs
 ;;
@@ -86,6 +85,10 @@
 (load! "dashboard.el")
 (load! "orgmode.el")
 
+;;
+;; initial size on startup
+;;
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 ;;
 ;; Popup menu on right mouse button
