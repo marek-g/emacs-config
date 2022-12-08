@@ -27,7 +27,10 @@
 ;;(setq doom-font (font-spec :family "Source Code Pro" :size 18 :weight 'semi-light))
 ;;(setq doom-font (font-spec :family "JetBrains Mono" :size 18 :weight 'semi-light))
 ;;(setq doom-font (font-spec :family "Iosevka SS10" :size 18 :weight 'semi-light))
-(setq doom-font (font-spec :family "Iosevka" :size 18 :weight 'semi-light))
+
+(setq doom-font (font-spec :family "Iosevka" :size 18))
+(unless (find-font doom-font)
+  (setq doom-font (font-spec :size 18)))
 
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
