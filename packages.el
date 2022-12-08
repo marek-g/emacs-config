@@ -50,12 +50,8 @@
 ;(unpin! t)
 
 
-;;
-;; Popup menu on right mouse button
-;;
-
-(package! popup-edit-menu)
-
+(package! popup-edit-menu) ; popup menu on right mouse button
+(package! burly) ; save frames and buffers as bookmarks
 
 ;;
 ;; Modern key-bindings (ctrl+c, ctrl+v, ctrl+s, ctrl+a etc.)
