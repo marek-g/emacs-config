@@ -88,6 +88,9 @@
 (load! "dashboard.el")
 (load! "orgmode.el")
 
+(when (equal (system-name) "WorkLaptop")
+  (load! "lsp/java.el"))
+
 ;;
 ;; initial size on startup
 ;;
