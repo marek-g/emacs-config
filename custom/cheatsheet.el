@@ -1,4 +1,4 @@
-(load! "packages/cheatsheet.el")
+(load! "../packages/cheatsheet.el")
 
 (define-key global-map [f1] 'cheatsheet-toggle-window)
 
