@@ -84,9 +84,9 @@
 ;; External configs
 ;;
 
-(load! "cheatsheet.el")
-(load! "dashboard.el")
-(load! "orgmode.el")
+(load! "custom/cheatsheet.el")
+(load! "custom/dashboard.el")
+(load! "custom/orgmode.el")
 
 (when (equal (system-name) "WorkLaptop")
   (load! "lsp/java.el"))
