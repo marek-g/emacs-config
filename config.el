@@ -182,7 +182,8 @@
 (setq-default indent-tabs-mode t) ; enable tabs
 (global-visual-line-mode t) ; enable long line wrapping
 ;(global-linum-mode t) ; enable line numbers
-(set-scroll-bar-mode t) ; enable scroll bars
+(when (fboundp 'set-scroll-bars-mode)
+  (set-scroll-bar-mode t)) ; enable scroll bars
 
 (define-key isearch-mode-map (kbd "C-f") 'isearch-forward)
 (define-key isearch-mode-map (kbd "M-f") 'isearch-forward-regexp)
