@@ -86,6 +86,7 @@
 
 (load! "custom/cheatsheet.el")
 (load! "custom/dashboard.el")
+(load! "custom/eaf.el")
 (load! "custom/orgmode.el")
 (load! "custom/projectile.el")
 
