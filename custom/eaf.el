@@ -38,7 +38,7 @@
   ;(require 'eaf-airshare)
   (require 'eaf-terminal)
   (require 'eaf-markdown-previewer)
-  ;(require 'eaf-video-player)
+  (require 'eaf-video-player)
   ;(require 'eaf-vue-demo)
   (require 'eaf-file-sender)
   (require 'eaf-pdf-viewer)
