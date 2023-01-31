@@ -87,6 +87,7 @@
 (load! "custom/cheatsheet.el")
 (load! "custom/dashboard.el")
 (load! "custom/eaf.el")
+(load! "custom/ledger-mode.el")
 (load! "custom/orgmode.el")
 (load! "custom/projectile.el")
 
@@ -231,20 +232,3 @@ If point was already at that position, move point to beginning of line."
 
 ; initial size
 (setq treemacs-width 30)
-
-
-;;
-;; Leger-mode configuration
-;;
-
-(setq ledger-reconcile-default-commodity "PLN")
-
-(setq ledger-post-auto-align nil)
-
-(setq ledger-reports
-  '(("Balance PLN - Aktywa" "%(binary) -w -f %(ledger-file) -X PLN balance ^Aktywa")
-    ("Balance PLN - Wszystko" "%(binary) -w -f %(ledger-file) -X PLN balance")
-    ("Balance - Wszystko" "%(binary) -f %(ledger-file) balance")
-    ("reg" "%(binary) -f %(ledger-file) reg")
-    ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
-    ("account" "%(binary) -f %(ledger-file) reg %(account)")))
