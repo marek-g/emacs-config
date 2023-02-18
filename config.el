@@ -91,8 +91,10 @@
 (load! "custom/orgmode.el")
 (load! "custom/projectile.el")
 
-(when (equal (system-name) "WorkLaptop")
+(when LSP-JAVA-P
   (load! "lsp/java.el"))
+(when LSP-RUST-P
+  (load! "lsp/rust.el"))
 
 ;;
 ;; initial size on startup
