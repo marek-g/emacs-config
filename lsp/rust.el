@@ -1,9 +1,10 @@
-(after! rustic
-  (set-formatter! 'rustic-mode #'rustic-cargo-fmt))
-
 (setq rustic-lsp-server 'rust-analyzer
-      rustic-format-on-save t
-      lsp-rust-server 'rust-analyzer)
+       lsp-rust-server 'rust-analyzer)
+
+(after! rustic
+  (setq rustic-format-on-save t)
+  (setq rustic-rustfmt-args "--edition 2021")
+  (set-formatter! 'rustic-mode #'rustic-cargo-fmt))
 
 (after! lsp-rust
   (setq lsp-rust-analyzer-lru-capacity 100
