@@ -1,6 +1,12 @@
-;; Early initialization.
+;;
+;; Disable package.el
+;;
+(setq package-enable-at-startup nil)
 
-;; Defines environments
+;;
+;; Environment
+;;
+
 (defconst ANDROID-P (string-equal system-type "android"))
 
 (defconst WORKDESKTOP-P (string-equal (system-name) "WorkLaptop"))
@@ -8,7 +14,27 @@
 
 (defconst DESKTOP-P (or WORKDESKTOP-P HOMEDESKTOP-P))
 
-;; Defines conditions at which to initialize which modules.
+;;
+;; Conditions at which to initialize which modules.
+;;
+
 (defconst LSP-JAVA-P WORKDESKTOP-P)
 (defconst LSP-RUST-P HOMEDESKTOP-P)
 (defconst LSP-P (or LSP-JAVA-P LSP-RUST-P))
+
+;;
+;; On Android, integrate with Termux
+;;
+
+(when ANDROID-P
+  (progn
+
+	;; Add Termux binaries to PATH environment
+    (setenv "PATH"
+      (let ((current (getenv "PATH"))
+            (new "/data/data/com.termux/files/usr/bin"))
+        (if current (concat new ":" current) new)))
+
+  	;; Set magit-git-executable
+  	(setq magit-git-executable "/data/data/com.termux/files/usr/bin/git")
+  ))
