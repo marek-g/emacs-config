@@ -1,2 +1,5 @@
 ;; initilize package manager
-(load (message (expand-file-name "package-manager-init.el" user-emacs-directory)))
+(load (expand-file-name "package-manager-init.el" user-emacs-directory))
+
+;; load all modules
+(load (expand-file-name "modules-load.el" user-emacs-directory))
