@@ -22,8 +22,10 @@
                ((zerop (call-process "git" nil buffer t "checkout"
                                      (or (plist-get order :ref) "--"))))
                (emacs (concat invocation-directory invocation-name))
-               ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
-                                     "--eval" "(byte-recompile-directory \".\" 0 'force)"))))
+
+               (unless ANDROID-P
+                 ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
+                                     "--eval" "(byte-recompile-directory \".\" 0 'force)")))))
           (progn (require 'elpaca)
                  (elpaca-generate-autoloads "elpaca" repo)
                  (kill-buffer buffer))
