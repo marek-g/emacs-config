@@ -27,14 +27,7 @@
 ;;
 
 (when ANDROID-P
-  (progn
-
-	;; Add Termux binaries to PATH environment
-    (setenv "PATH"
-      (let ((current (getenv "PATH"))
-            (new "/data/data/com.termux/files/usr/bin"))
-        (if current (concat new ":" current) new)))
-
-  	;; Set magit-git-executable
-  	(setq magit-git-executable "/data/data/com.termux/files/usr/bin/git")
-  ))
+  ;; Add Termux binaries to PATH environment
+  (let ((termuxpath "/data/data/com.termux/files/usr/bin"))
+    (setenv "PATH" (concat (getenv "PATH") termuxpath))
+    (setq exec-path (append exec-path (list termuxpath)))))
