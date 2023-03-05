@@ -2,7 +2,6 @@
 (require 'package)
 
 ;; add `melpa` to `package-archives`
-(add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 ;; manually manage list of selected packages, so they are not added automatically to init.el
