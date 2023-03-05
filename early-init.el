@@ -30,8 +30,9 @@
   ;; Fix SSL connection.
   ;; Android port is builded without gnutls support and uses 'gnutls-cli' command.
   ;; 'gnutls' command line must be installed in Termux.
-  ;; This removes '%t' (filepath with trused certificates) from original command line, as it causes the error.
-  (setq tls-program '("gnutls-cli -p %p %h"
-		      "gnutls-cli -p %p %h --protocols ssl3"
-		      "openssl s_client -connect %h:%p -no_ssl2 -ign_eof"))
+  ;; This replaces '%t' (filepath with trused certificates) from original command line, as it causes the error
+  ;; with path to cert.pem.
+  (setq tls-program '("gnutls-cli --x509cafile /data/data/com.termux/files/usr/etc/tls/cert.pem -p %p %h"
+		      "gnutls-cli --x509cafile /data/data/com.termux/files/usr/etc/tls/cert.pem -p %p %h --protocols ssl3"
+		      "openssl s_client -connect %h:%p -CAfile /data/data/com.termux/files/usr/etc/tls/cert.pem -no_ssl2 -ign_eof"))
 )
