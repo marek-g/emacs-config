@@ -26,8 +26,3 @@
   (let ((termuxpath "/data/data/com.termux/files/usr/bin"))
     (setenv "PATH" (concat (getenv "PATH") ":" termuxpath))
     (setq exec-path (append exec-path (list termuxpath)))))
-
-;;
-;; Loads a nice blue theme, avoids the white screen flash on startup.
-;;
-(load-theme 'deeper-blue t)

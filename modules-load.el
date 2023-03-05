@@ -2,3 +2,4 @@
 (add-to-list 'load-path (expand-file-name "modules/" user-emacs-directory))
 
 (require 'marek-git)
+(require 'marek-theme)
