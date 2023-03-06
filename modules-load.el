@@ -3,4 +3,6 @@
 
 (require 'marek-general-keys)
 (require 'marek-git)
+(require 'marek-popup-menu)
 (require 'marek-theme)
+(require 'marek-window-settings)
