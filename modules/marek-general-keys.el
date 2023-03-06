@@ -34,6 +34,47 @@
 (global-set-key (kbd "C-y") 'undo-redo)
 
 ;;
+;; search
+;;
+(define-key isearch-mode-map (kbd "C-f") 'isearch-forward)
+(define-key isearch-mode-map (kbd "M-f") 'isearch-forward-regexp)
+(define-key global-map (kbd "<f3>") 'isearch-repeat-forward)
+(define-key global-map (kbd "S-<f3>") 'isearch-repeat-backward)
+(define-key global-map (kbd "C-<f3>") 'isearch-exit) ;; stops repeat search - TODO: find a way to ESC do the same
+(define-key isearch-mode-map (kbd "<up>") 'isearch-ring-retreat)
+(define-key isearch-mode-map (kbd "<down>") 'isearch-ring-advance)
+(define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
+(define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
+
+;;
+;; Map Escape to cancel (like C-g)
+;;
+(define-key isearch-mode-map [escape] 'isearch-abort)   ;; isearch
+(define-key isearch-mode-map "\e" 'isearch-abort)   ;; \e seems to work better for terminals
+(global-set-key [escape] 'keyboard-escape-quit)         ;; everywhere else
+
+;;
+;; Switch buffers
+;;
+(global-set-key (kbd "C-SPC") 'switch-to-buffer) ; switch to buffer
+
+;;
+;; home key - cycle between move to beginning of line and indentation
+;;
+(defun smart-beginning-of-line()
+  "Move point to first non-whitespace character or beginning-of-line.
+
+Move point to the first non-whitespace character on this line.
+If point was already at that position, move point to beginning of line."
+  (interactive "^") ; Use (interactive) in Emacs 22 or older
+  (let ((oldpos (point)))
+    (back-to-indentation)
+    (and (= oldpos (point))
+         (beginning-of-line))))
+
+(global-set-key [home] 'smart-beginning-of-line)
+
+;;
 ;; <menu> leader key key-map
 ;;
 ;; on Linux, the menu/apps key syntax is <menu>
