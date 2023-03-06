@@ -15,4 +15,21 @@
   ; delete window
   (define-key wakib-keys-overriding-map (kbd "s-k") 'delete-window))
 
+;;
+;; <menu> leader key key-map
+;;
+;; on Linux, the menu/apps key syntax is <menu>
+;; on Windows, the menu/apps key syntax is <apps>
+;; make the syntax equal and make <menu> key leader key
+;;
+(define-key key-translation-map (kbd "<apps>") (kbd "<menu>"))
+(global-unset-key [apps])
+(global-unset-key [menu])
+
+(define-prefix-command 'menu-leader-key-map)
+(define-key menu-leader-key-map (kbd "RET") 'execute-extended-command)
+(define-key menu-leader-key-map (kbd "<menu>") 'exchange-point-and-mark)
+(define-key menu-leader-key-map (kbd "'") 'quoted-insert)
+(global-set-key (kbd "<menu>") 'menu-leader-key-map)
+
 (provide 'marek-general-keys)
