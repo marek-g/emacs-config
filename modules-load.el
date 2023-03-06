@@ -6,4 +6,4 @@
 (require 'marek-git)
 (require 'marek-popup-menu)
 (require 'marek-theme)
-
+(require 'marek-window-management)
