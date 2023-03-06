@@ -1,4 +1,5 @@
 .cache/
 auto-save-list/
 elpa/
+quelpa/
 transient/

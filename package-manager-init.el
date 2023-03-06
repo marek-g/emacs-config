@@ -21,3 +21,19 @@
 ;; causes the packages to be installed automatically if not already present on your system
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
+
+;;
+;; Quelpa - install packages from local or remote sources (like github)
+;;
+
+(unless (package-installed-p 'quelpa)
+  (with-temp-buffer
+    (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
+    (eval-buffer)
+    (quelpa-self-upgrade)))
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
