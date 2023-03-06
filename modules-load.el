@@ -5,6 +5,7 @@
 (require 'marek-general-keys)
 (require 'marek-general-settings)
 (require 'marek-git)
+(require 'marek-orgmode)
 (require 'marek-popup-menu)
 (require 'marek-projects)
 (require 'marek-theme)
