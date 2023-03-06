@@ -14,4 +14,4 @@
 ;; allow to select text with shift
 (setq org-support-shift-select t)
 
-(provide 'marek-orgmode)
+(provide 'marek-org-mode)
