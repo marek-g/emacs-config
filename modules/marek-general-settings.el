@@ -3,4 +3,4 @@
 ;;
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
-(provide 'marek-window-settings)
+(provide 'marek-general-settings)
