@@ -1,8 +1,8 @@
 (add-to-list 'package-selected-packages 'which-key)
 (use-package which-key
   :diminish
-  :init
-  (require 'which-key)
+  :config
+  (setq which-key-idle-delay 0.1)
   (which-key-mode 1)
 )
 
