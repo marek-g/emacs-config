@@ -115,4 +115,8 @@ parses its input."
       `(orderless-flex . ,(substring pattern 0 -1))))
 )
 
+(add-to-list 'package-selected-packages 'vertico-posframe)
+(use-package vertico-posframe
+  :config (vertico-posframe-mode 1))
+
 (provide 'marek-completion)
