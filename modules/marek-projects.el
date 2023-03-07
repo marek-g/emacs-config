@@ -12,6 +12,7 @@
 
 (add-to-list 'package-selected-packages 'projectile)
 (use-package projectile
+  :diminish
   :init
   (setq projectile-cache-file (expand-file-name ".cache/projectile.cache" user-emacs-directory)
 	projectile-known-projects-file (expand-file-name ".cache/projectile-known-projects.eld" user-emacs-directory))

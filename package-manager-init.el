@@ -22,6 +22,10 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
+;; diminish - allow to hide minor modes from mode line
+(add-to-list 'package-selected-packages 'diminish)
+(use-package diminish)
+
 ;;
 ;; Quelpa - install packages from local or remote sources (like github)
 ;;

@@ -1,5 +1,6 @@
 (add-to-list 'package-selected-packages 'wakib-keys)
 (use-package wakib-keys
+  :diminish wakib-keys
   :config
   (wakib-keys 1)
   (add-hook 'after-change-major-mode-hook 'wakib-update-major-mode-map)
