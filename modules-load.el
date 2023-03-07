@@ -7,6 +7,7 @@
 (require 'marek-general-settings)
 (require 'marek-git)
 (require 'marek-ledger-mode)
+(require 'marek-markdown-mode)
 (require 'marek-org-mode)
 (require 'marek-popup-menu)
 (require 'marek-projects)
