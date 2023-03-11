@@ -1,6 +1,7 @@
 ;;
 ;; Loads a nice blue theme.
 ;;
+
 (load-theme 'deeper-blue t)
 
 ;;
@@ -13,5 +14,27 @@
     (set-frame-font my-font nil t)
   )
 )
+
+;;
+;; Display clock
+;;
+
+(display-time-mode 1)
+(setq display-time-24hr-format t)
+(setq display-time-default-load-average nil) ; do not display CPU usage
+
+ (defface egoge-display-time
+   '((((type x w32 mac))
+      (:foreground "#AA6000" :inherit bold))
+     (((type tty))
+      (:foreground "yellow")))
+   "Face used to display the time in the mode line.")
+
+ ;; This causes the current time in the mode line to be displayed in
+ ;; `egoge-display-time-face' to make it stand out visually.
+ (setq display-time-string-forms
+       '((propertize (concat " " 24-hours ":" minutes " ")
+ 		    'face 'egoge-display-time)))
+
 
 (provide 'marek-theme)
