@@ -27,7 +27,6 @@
 ;; Display clock
 ;;
 
-(display-time-mode 1)
 (setq display-time-24hr-format t)
 (setq display-time-default-load-average nil) ; do not display CPU usage
 
@@ -43,6 +42,8 @@
  (setq display-time-string-forms
        '((propertize (concat " " 24-hours ":" minutes " ")
  		    'face 'egoge-display-time)))
+
+(display-time-mode 1)
 
 
 (provide 'marek-theme)
