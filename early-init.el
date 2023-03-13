@@ -1,4 +1,10 @@
 ;;
+;; disable package.el (using elpaca instead)
+;;
+
+(setq package-enable-at-startup nil)
+
+;;
 ;; Environment
 ;;
 
