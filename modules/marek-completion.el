@@ -121,4 +121,9 @@ parses its input."
 (use-package vertico-posframe
   :config (vertico-posframe-mode 1))
 
+(add-to-list 'package-selected-packages 'company)
+(use-package company
+  :custom
+  (company-idle-delay 0.5)) ;; how long to wait until popup
+
 (provide 'marek-completion)

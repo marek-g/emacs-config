@@ -13,3 +13,8 @@
 (require 'marek-projects)
 (require 'marek-theme)
 (require 'marek-window-management)
+
+(when LSP-P
+  (require 'marek-lsp))
+(when LSP-RUST-P
+  (require 'marek-lsp-rust))
