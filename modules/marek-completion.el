@@ -9,8 +9,9 @@
   :custom
   (marginalia-max-relative-age 0)
   (marginalia-align 'right)
-  (:keymaps 'minibuffer-local-map
-   "M-A" 'marginalia-cycle)
+  :bind
+  (:map minibuffer-local-map
+   ("M-A" . marginalia-cycle))
   :init
   (marginalia-mode))
 
@@ -21,17 +22,19 @@
   (all-the-icons-completion-mode))
 
 (use-package vertico
+  :elpaca (vertico :files (:defaults "extensions/*"))
   :custom
   (vertico-count 13)                    ; Number of candidates to display
   (vertico-resize t)
   (vertico-cycle nil) ; Go from last to first candidate and first to last (cycle)?
-  (:keymaps 'vertico-map
-   "<tab>" #'vertico-insert  ; Insert selected candidate into text area
-   "<escape>" #'minibuffer-keyboard-quit ; Close minibuffer
+  :bind
+  (:map vertico-map
+   ("<tab>" . vertico-insert)  ; Insert selected candidate into text area
+   ("<escape>" . minibuffer-keyboard-quit) ; Close minibuffer
    ;; NOTE 2022-02-05: Cycle through candidate groups
-   "C-M-n" #'vertico-next-group
-   "C-M-p" #'vertico-previous-group)
-  :config
+   ("C-M-n" . vertico-next-group)
+   ("C-M-p" . vertico-previous-group))
+  :init
   (vertico-mode))
 
 (use-package orderless
@@ -110,7 +113,8 @@ parses its input."
       `(orderless-flex . ,(substring pattern 0 -1))))
 )
 
-(use-package vertico-posframe
-  :config (vertico-posframe-mode 1))
+;(use-package vertico-posframe
+;  :after (vertico vertico-multiform)
+;  :init (vertico-posframe-mode 1))
 
 (provide 'marek-completion)
