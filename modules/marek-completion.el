@@ -26,7 +26,6 @@
 
 (add-to-list 'package-selected-packages 'vertico)
 (use-package vertico
-  :elpaca (vertico :files (:defaults "extensions/*"))
   :custom
   (vertico-count 13)                    ; Number of candidates to display
   (vertico-resize t)
