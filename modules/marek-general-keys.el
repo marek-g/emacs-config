@@ -1,3 +1,4 @@
+(add-to-list 'package-selected-packages 'wakib-keys)
 (use-package wakib-keys
   :diminish wakib-keys
   :config
@@ -16,6 +17,7 @@
 ;;
 ;; vundo (visual undo-tree)
 ;;
+(add-to-list 'package-selected-packages 'vundo)
 (use-package vundo
   :config
   (setq vundo-compact-display t)

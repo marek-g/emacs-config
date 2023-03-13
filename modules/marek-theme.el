@@ -19,6 +19,7 @@
 ;; Icons
 ;;
 
+(add-to-list 'package-selected-packages 'all-the-icons)
 (use-package all-the-icons
   :if (display-graphic-p))
 

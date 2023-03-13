@@ -1,6 +1,7 @@
+(add-to-list 'package-selected-packages 'ledger-mode)
 (use-package ledger-mode
   ; load from github as my patches (2022-04-14) are not on melpa yet
-  :elpaca (ledger-mode :host github :repo "ledger/ledger-mode")
+  :quelpa (ledger-mode :fetcher github :repo "ledger/ledger-mode")
   :init
   (setq ledger-reconcile-default-commodity "PLN")
   (setq ledger-post-auto-align nil)

@@ -1,3 +1,4 @@
+(add-to-list 'package-selected-packages 'which-key)
 (use-package which-key
   :diminish
   :config
@@ -5,6 +6,7 @@
   (which-key-mode 1)
 )
 
+(add-to-list 'package-selected-packages 'marginalia)
 (use-package marginalia
   :custom
   (marginalia-max-relative-age 0)
@@ -15,12 +17,14 @@
   :init
   (marginalia-mode))
 
+(add-to-list 'package-selected-packages 'all-the-icons-completion)
 (use-package all-the-icons-completion
   :after (marginalia all-the-icons)
   :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
   :init
   (all-the-icons-completion-mode))
 
+(add-to-list 'package-selected-packages 'vertico)
 (use-package vertico
   :elpaca (vertico :files (:defaults "extensions/*"))
   :custom
@@ -37,6 +41,7 @@
   :init
   (vertico-mode))
 
+(add-to-list 'package-selected-packages 'orderless)
 (use-package orderless
   :custom
   (completion-styles '(orderless))
@@ -113,8 +118,8 @@ parses its input."
       `(orderless-flex . ,(substring pattern 0 -1))))
 )
 
-;(use-package vertico-posframe
-;  :after (vertico vertico-multiform)
-;  :init (vertico-posframe-mode 1))
+(add-to-list 'package-selected-packages 'vertico-posframe)
+(use-package vertico-posframe
+  :config (vertico-posframe-mode 1))
 
 (provide 'marek-completion)
