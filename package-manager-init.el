@@ -30,17 +30,17 @@
 ;; Quelpa - install packages from local or remote sources (like github)
 ;;
 
-(setq quelpa-checkout-melpa-p nil) ; don't use quelpa for MELPA git repo - faster startup
+;; (setq quelpa-checkout-melpa-p nil) ; don't use quelpa for MELPA git repo - faster startup
 
-(unless (package-installed-p 'quelpa)
-  (with-temp-buffer
-    (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
-    (eval-buffer)
-    (quelpa-self-upgrade)))
+;; (unless (package-installed-p 'quelpa)
+;;   (with-temp-buffer
+;;     (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
+;;     (eval-buffer)
+;;     (quelpa-self-upgrade)))
 
-(quelpa
- '(quelpa-use-package
-   :fetcher git
-   :url "https://github.com/quelpa/quelpa-use-package.git"))
-(require 'quelpa-use-package)
+;; (quelpa
+;;  '(quelpa-use-package
+;;    :fetcher git
+;;    :url "https://github.com/quelpa/quelpa-use-package.git"))
+;; (require 'quelpa-use-package)
 
