@@ -53,6 +53,24 @@
                 :key "C-f"
                 :description "search.")
 
+
+(cheatsheet-add :group "Navigation"
+                :key "C-M-<left>, C-M-<right>"
+                :description "previous, next element, same level.")
+
+(cheatsheet-add :group "Navigation"
+                :key "C-M-<up>, C-M-<down>"
+                :description "element level up, element level down.")
+
+(cheatsheet-add :group "Navigation"
+                :key "C-M-p, C-M-n"
+                :description "previous, next parentheses on the same level.")
+
+(cheatsheet-add :group "Navigation"
+                :key "M-{, M-}"
+                :description "previous, next paragraph.")
+
+
 (cheatsheet-add :group "Window management"
                 :key "C-tab"
                 :description "switch active window.")
