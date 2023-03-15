@@ -16,5 +16,7 @@
 
 (when LSP-P
   (require 'marek-lsp))
+(when LSP-PYTHON-P
+  (require 'marek-lsp-python))
 (when LSP-RUST-P
   (require 'marek-lsp-rust))

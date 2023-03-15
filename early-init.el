@@ -14,8 +14,9 @@
 ;;
 
 (defconst LSP-JAVA-P WORKDESKTOP-P)
+(defconst LSP-PYTHON-P HOMEDESKTOP-P)
 (defconst LSP-RUST-P HOMEDESKTOP-P)
-(defconst LSP-P (or LSP-JAVA-P LSP-RUST-P))
+(defconst LSP-P (or LSP-JAVA-P LSP-PYTHON-P LSP-RUST-P))
 
 ;;
 ;; On Android, integrate with Termux
