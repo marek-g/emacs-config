@@ -11,6 +11,8 @@
 (set-face-foreground 'font-lock-comment-face "forest green") ; comment
 (set-face-foreground 'font-lock-doc-face "lime green") ; doc comment
 
+(set-face-background 'mode-line "chocolate") ; mode-line background
+
 ;;
 ;; Default font
 ;;
@@ -39,9 +41,9 @@
 
  (defface egoge-display-time
    '((((type x w32 mac))
-      (:foreground "#AA6000" :inherit bold))
+      (:foreground "gold" :inherit bold))
      (((type tty))
-      (:foreground "yellow")))
+      (:foreground "gold")))
    "Face used to display the time in the mode line.")
 
  ;; This causes the current time in the mode line to be displayed in
