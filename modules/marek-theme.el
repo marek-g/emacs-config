@@ -5,6 +5,13 @@
 (load-theme 'deeper-blue t)
 
 ;;
+;; Change some colors
+;;
+
+(set-face-foreground 'font-lock-comment-face "forest green") ; comment
+(set-face-foreground 'font-lock-doc-face "lime green") ; doc comment
+
+;;
 ;; Default font
 ;;
 
