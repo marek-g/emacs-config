@@ -1,6 +1,7 @@
 ;;
 ;; initial size on startup
 ;;
+(setq frame-resize-pixelwise t) ; do not round frame size to font size
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 (delete-selection-mode t) ; enable deleting selected text when typing
