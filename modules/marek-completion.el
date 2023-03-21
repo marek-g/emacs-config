@@ -52,6 +52,7 @@
 
 (add-to-list 'package-selected-packages 'company)
 (use-package company
+  :diminish
   :bind (:map company-mode-map
 	      ("C-SPC" . company-complete))
   :config
