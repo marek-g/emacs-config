@@ -5,14 +5,21 @@
   (wakib-keys 1)
   (add-hook 'after-change-major-mode-hook 'wakib-update-major-mode-map)
   (add-hook 'menu-bar-update-hook 'wakib-update-minor-mode-maps)
-  ; killing the buffer is moved to C-k
+  ;; killing the buffer is moved to C-k
   (define-key wakib-keys-overriding-map (kbd "C-k") 'kill-current-buffer)
-  ; split window horizontally
+  ;; split window horizontally
   (define-key wakib-keys-overriding-map (kbd "s-h") 'split-window-right)
-  ; split window vertically
+  ;; split window vertically
   (define-key wakib-keys-overriding-map (kbd "s-v") 'split-window-below)
-  ; delete window
-  (define-key wakib-keys-overriding-map (kbd "s-k") 'delete-window))
+  ;; delete window
+  (define-key wakib-keys-overriding-map (kbd "s-k") 'delete-window)
+  ;; decrease font size
+  (define-key wakib-keys-overriding-map (kbd "C--") nil)
+  (define-key wakib-keys-overriding-map (kbd "C-<kp-subtract>") 'text-scale-decrease)
+  ;; increase font size
+  (define-key wakib-keys-overriding-map (kbd "C-=") nil)
+  (define-key wakib-keys-overriding-map (kbd "C-<kp-add>") 'text-scale-increase)
+)
 
 ;;
 ;; vundo (visual undo-tree)
@@ -44,6 +51,19 @@
 (define-key isearch-mode-map (kbd "<down>") 'isearch-ring-advance)
 (define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
 (define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
+
+;;
+;; Navigate back and forward between visited places
+;;
+(add-to-list 'package-selected-packages 'backward-forward)
+(use-package backward-forward
+  :config
+  (backward-forward-mode t)
+  (define-key backward-forward-mode-map (kbd "C-<left>") nil)
+  (define-key backward-forward-mode-map (kbd "C-<right>") nil)
+  (define-key backward-forward-mode-map (kbd "C--") 'backward-forward-previous-location)
+  (define-key backward-forward-mode-map (kbd "C-_") 'backward-forward-next-location)
+  )
 
 ;;
 ;; Map Escape to cancel (like C-g)

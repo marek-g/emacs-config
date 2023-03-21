@@ -70,6 +70,10 @@
                 :key "M-{, M-}"
                 :description "previous, next paragraph.")
 
+(cheatsheet-add :group "Navigation"
+                :key "C--, C-_"
+                :description "backward, forward location.")
+
 
 (cheatsheet-add :group "Window management"
                 :key "C-tab"
