@@ -14,11 +14,11 @@
   ;; delete window
   (define-key wakib-keys-overriding-map (kbd "s-k") 'delete-window)
   ;; decrease font size
-  (define-key wakib-keys-overriding-map (kbd "C--") nil)
-  (define-key wakib-keys-overriding-map (kbd "C-<kp-subtract>") 'text-scale-decrease)
+  ;;(define-key wakib-keys-overriding-map (kbd "C--") nil)
+  ;;(define-key wakib-keys-overriding-map (kbd "C-<kp-subtract>") 'text-scale-decrease)
   ;; increase font size
-  (define-key wakib-keys-overriding-map (kbd "C-=") nil)
-  (define-key wakib-keys-overriding-map (kbd "C-<kp-add>") 'text-scale-increase)
+  ;;(define-key wakib-keys-overriding-map (kbd "C-=") nil)
+  ;;(define-key wakib-keys-overriding-map (kbd "C-<kp-add>") 'text-scale-increase)
 )
 
 ;;
@@ -61,8 +61,8 @@
   (backward-forward-mode t)
   (define-key backward-forward-mode-map (kbd "C-<left>") nil)
   (define-key backward-forward-mode-map (kbd "C-<right>") nil)
-  (define-key backward-forward-mode-map (kbd "C--") 'backward-forward-previous-location)
-  (define-key backward-forward-mode-map (kbd "C-_") 'backward-forward-next-location)
+  (define-key backward-forward-mode-map (kbd "M-<left>") 'backward-forward-previous-location)
+  (define-key backward-forward-mode-map (kbd "M-<right>") 'backward-forward-next-location)
   )
 
 ;;

@@ -71,7 +71,7 @@
                 :description "previous, next paragraph.")
 
 (cheatsheet-add :group "Navigation"
-                :key "C--, C-_"
+                :key "M-<left>, M-<right>"
                 :description "backward, forward location.")
 
 
