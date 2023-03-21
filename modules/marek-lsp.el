@@ -11,7 +11,9 @@
 (use-package lsp-ui :commands lsp-ui-mode)
 
 (add-to-list 'package-selected-packages 'lsp-treemacs)
-(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list
+  :custom
+  (lsp-treemacs-sync-mode 1))
 
 (add-to-list 'package-selected-packages 'dap-mode)
 (use-package dap-mode)
