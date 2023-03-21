@@ -10,6 +10,10 @@
   (:map lsp-mode-map
 	("C-." . lsp-execute-code-action)
 	("M-RET" . lsp-execute-code-action)
+	("<f12>" . lsp-find-definition)
+	("M-<f12>" . lsp-find-type-definition)
+	("C-<f12>" . lsp-find-declaration)
+	("S-<f12>" . lsp-find-references)
 	)
   )
 

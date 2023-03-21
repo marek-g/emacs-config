@@ -55,24 +55,24 @@
 
 
 (cheatsheet-add :group "Navigation"
-                :key "C-M-<left>, C-M-<right>"
-                :description "previous, next element, same level.")
-
-(cheatsheet-add :group "Navigation"
-                :key "C-M-<up>, C-M-<down>"
-                :description "element level up, element level down.")
-
-(cheatsheet-add :group "Navigation"
-                :key "C-M-p, C-M-n"
-                :description "previous, next parentheses on the same level.")
+                :key "M-<left>, M-<right>"
+                :description "backward, forward location.")
 
 (cheatsheet-add :group "Navigation"
                 :key "M-{, M-}"
                 :description "previous, next paragraph.")
 
 (cheatsheet-add :group "Navigation"
-                :key "M-<left>, M-<right>"
-                :description "backward, forward location.")
+                :key "C-M-p, C-M-n"
+                :description "previous, next parentheses on the same level.")
+
+(cheatsheet-add :group "Navigation"
+                :key "C-M-<up>, C-M-<down>"
+                :description "element level up, element level down.")
+
+(cheatsheet-add :group "Navigation"
+                :key "C-M-<left>, C-M-<right>"
+                :description "previous, next element, same level.")
 
 
 (cheatsheet-add :group "Window management"
@@ -100,5 +100,18 @@
 (cheatsheet-add :group "Window management"
                 :key "s-h"
                 :description "split window horizontally.")
+
+(cheatsheet-add :group "Code"
+                :key "<F12>, M-<F12>, C-<F12>, S-<F12>"
+                :description "find definition, type definition, declaration, references.")
+
+(cheatsheet-add :group "Code"
+                :key "C-., M-RET"
+                :description "code action.")
+
+(cheatsheet-add :group "Code"
+                :key "C-SPC"
+                :description "completion.")
+
 
 (provide 'marek-cheatsheet)
