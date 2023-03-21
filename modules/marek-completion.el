@@ -52,7 +52,10 @@
 
 (add-to-list 'package-selected-packages 'company)
 (use-package company
-  :custom
-  (company-idle-delay 0.5)) ;; how long to wait until popup
+  :bind (:map company-mode-map
+	      ("C-SPC" . company-complete))
+  :config
+  (setq company-idle-delay 0.1) ;; how long to wait until popup
+  :hook (after-init . global-company-mode))
 
 (provide 'marek-completion)

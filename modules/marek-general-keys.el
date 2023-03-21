@@ -75,7 +75,7 @@
 ;;
 ;; Switch buffers
 ;;
-(global-set-key (kbd "C-SPC") 'switch-to-buffer) ; switch to buffer
+;;(global-set-key (kbd "C-SPC") 'switch-to-buffer) ; switch to buffer
 
 ;;
 ;; home key - cycle between move to beginning of line and indentation
