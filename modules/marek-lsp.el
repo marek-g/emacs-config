@@ -5,7 +5,13 @@
   (setq lsp-keymap-prefix "C-c l"
 	lsp-session-file (expand-file-name ".cache/.lsp-session-v1" user-emacs-directory))
   :hook ((lsp-mode . lsp-enable-which-key-integration))
-  :commands (lsp lsp-deferred))
+  :commands (lsp lsp-deferred)
+  :bind
+  (:map lsp-mode-map
+	("C-." . lsp-execute-code-action)
+	("M-RET" . lsp-execute-code-action)
+	)
+  )
 
 (add-to-list 'package-selected-packages 'lsp-ui)
 (use-package lsp-ui :commands lsp-ui-mode)
