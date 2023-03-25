@@ -13,6 +13,8 @@
   (define-key wakib-keys-overriding-map (kbd "s-v") 'split-window-below)
   ;; delete window
   (define-key wakib-keys-overriding-map (kbd "s-k") 'delete-window)
+  ;; remove escape from map
+  (define-key wakib-keys-overriding-map (kbd "<escape>") nil)
   ;; decrease font size
   ;;(define-key wakib-keys-overriding-map (kbd "C--") nil)
   ;;(define-key wakib-keys-overriding-map (kbd "C-<kp-subtract>") 'text-scale-decrease)
@@ -68,9 +70,7 @@
 ;;
 ;; Map Escape to cancel (like C-g)
 ;;
-(define-key isearch-mode-map [escape] 'isearch-abort)   ;; isearch
-(define-key isearch-mode-map "\e" 'isearch-abort)   ;; \e seems to work better for terminals
-(global-set-key [escape] 'keyboard-escape-quit)         ;; everywhere else
+(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
 ;;
 ;; Switch buffers

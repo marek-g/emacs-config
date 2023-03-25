@@ -33,7 +33,6 @@
   :bind
   (:map vertico-map
    ("<tab>" . vertico-insert)  ; Insert selected candidate into text area
-   ("<escape>" . minibuffer-keyboard-quit) ; Close minibuffer
    ;; NOTE 2022-02-05: Cycle through candidate groups
    ("C-M-n" . vertico-next-group)
    ("C-M-p" . vertico-previous-group))
