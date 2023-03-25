@@ -85,7 +85,7 @@
 
 
 (cheatsheet-add :group "Buffers"
-                :key "C-space, C-b"
+                :key "M-space, C-b"
                 :description "switch buffer.")
 
 (cheatsheet-add :group "Buffers"
