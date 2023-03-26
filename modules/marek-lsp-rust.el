@@ -21,7 +21,7 @@
 							      :MIMode "gdb"
 							      :miDebuggerPath "rust-gdb"
 							      :environment []
-							      :program "${workspaceFolder}/target/debug/hello / replace with binary"
+							      :program "/home/marek/Ext/.cargo_cache/debug/speech_recognition_test"
 							      :cwd "${workspaceFolder}"
 							      :console "external"
 							      :dap-compilation "cargo build"

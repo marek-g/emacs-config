@@ -31,6 +31,13 @@
   :hook ((lsp-mode . yas-minor-mode)))
 
 (add-to-list 'package-selected-packages 'dap-mode)
-(use-package dap-mode)
+(use-package dap-mode
+  :bind
+  (:map dap-mode-map
+   ("<F5>" . dap-continue)
+   ("<F9>" . dap-breakpoint-toggle)
+   ("<F10>" . dap-next)
+   ("<F11>" . dap-step-in)
+   ("<S-F11>" . dap-step-out)))
 
 (provide 'marek-lsp)
