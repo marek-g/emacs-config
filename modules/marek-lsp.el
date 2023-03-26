@@ -25,6 +25,11 @@
   :custom
   (lsp-treemacs-sync-mode 1))
 
+(add-to-list 'package-selected-packages 'yasnippet)
+(use-package yasnippet
+  :ensure t
+  :hook ((lsp-mode . yas-minor-mode)))
+
 (add-to-list 'package-selected-packages 'dap-mode)
 (use-package dap-mode)
 
