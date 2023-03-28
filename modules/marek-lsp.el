@@ -32,12 +32,25 @@
 
 (add-to-list 'package-selected-packages 'dap-mode)
 (use-package dap-mode
+  :commands dap-debug
   :bind
-  (:map dap-mode-map
-   ("<F5>" . dap-continue)
-   ("<F9>" . dap-breakpoint-toggle)
-   ("<F10>" . dap-next)
-   ("<F11>" . dap-step-in)
-   ("<S-F11>" . dap-step-out)))
+  ;; (("<F5>" . dap-continue)
+  ;;  ("<F9>" . dap-breakpoint-toggle)
+  ;;  ("<F10>" . dap-next)
+  ;;  ("<F11>" . dap-step-in)
+  ;;  ("<S-F11>" . dap-step-out))
+  ;; (:map dap-mode-map
+  ;;  ("<F5>" . dap-continue)
+  ;;  ("<F9>" . dap-breakpoint-toggle)
+  ;;  ("<F10>" . dap-next)
+  ;;  ("<F11>" . dap-step-in)
+  ;;  ("<S-F11>" . dap-step-out))
+  :config
+  (dap-ui-mode 1)
+  (dap-tooltip-mode 1)
+  (tooltip-mode 1)
+  (dap-ui-controls-mode 1)
+  (add-hook 'dap-stopped-hook
+            (lambda (arg) (call-interactively #'dap-hydra))))
 
 (provide 'marek-lsp)
