@@ -16,6 +16,12 @@
   :init
   (setq projectile-cache-file (expand-file-name ".cache/projectile.cache" user-emacs-directory)
 	projectile-known-projects-file (expand-file-name ".cache/projectile-known-projects.eld" user-emacs-directory))
+
+  (projectile-add-known-project "~/.config/emacs")
+  (when HOMEDESKTOP-P
+    (setq projectile-project-search-path `(("~/Ext/Src" . 3) "/media/veracrypt1/dokumenty/Notatki")
+	  ))
+
   (projectile-mode +1)
   :bind (:map projectile-mode-map
               ("C-c p" . projectile-command-map)))
