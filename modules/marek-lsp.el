@@ -4,7 +4,7 @@
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l"
 	lsp-session-file (expand-file-name ".cache/.lsp-session-v1" user-emacs-directory))
-  :hook ((lsp-mode . lsp-enable-which-key-integration))
+  :hook (lsp-mode . (lambda () (lsp-enable-which-key-integration) (superword-mode t)))
   :commands (lsp lsp-deferred)
   :bind
   (:map lsp-mode-map
