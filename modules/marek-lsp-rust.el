@@ -8,6 +8,16 @@
 (use-package rustic
   :config
   (setq rustic-format-on-save t)
+
+  (setq rustic-ansi-faces ["black"
+                              "deep pink"
+                              "green yellow"
+                              "gold"
+                              "turquoise"
+                              "violet"
+                              "aquamarine"
+                              "white"])
+
   :hook ((rust-mode .  (lambda ()
 			 (require 'dap-cpptools)
 

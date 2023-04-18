@@ -14,6 +14,18 @@
 (set-face-background 'mode-line "chocolate") ; mode-line background
 
 ;;
+;; Change terminal ansi colors
+;;
+
+(custom-set-faces
+ `(ansi-color-red ((t (:foreground "deep pink"))))
+ `(ansi-color-green ((t (:foreground "green yellow"))))
+ `(ansi-color-yellow ((t (:foreground "gold"))))
+ `(ansi-color-blue ((t (:foreground "turquoise"))))
+ `(ansi-color-magenta ((t (:foreground "violet"))))
+ `(ansi-color-cyan ((t (:foreground "aquamarine")))))
+
+;;
 ;; Default font
 ;;
 
