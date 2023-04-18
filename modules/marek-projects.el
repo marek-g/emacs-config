@@ -10,6 +10,9 @@
         ("<f9>" . treemacs))
 )
 
+(add-to-list 'package-selected-packages 'ripgrep)
+(use-package ripgrep)
+
 (add-to-list 'package-selected-packages 'projectile)
 (use-package projectile
   :diminish

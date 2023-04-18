@@ -15,6 +15,8 @@
   (define-key wakib-keys-overriding-map (kbd "s-k") 'delete-window)
   ;; remove escape from map
   (define-key wakib-keys-overriding-map (kbd "<escape>") nil)
+  ;; change 'isearch-backward to 'projectile-ripgrep
+  (define-key wakib-keys-overriding-map (kbd "C-S-f") 'projectile-ripgrep)
   ;; decrease font size
   ;;(define-key wakib-keys-overriding-map (kbd "C--") nil)
   ;;(define-key wakib-keys-overriding-map (kbd "C-<kp-subtract>") 'text-scale-decrease)
