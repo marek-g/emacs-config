@@ -45,7 +45,19 @@
   :if (display-graphic-p))
 
 ;;
-;; Display clock
+;; Mode-line - group all minor modes in a nested menu
+;;
+
+(add-to-list 'package-selected-packages 'minions)
+(use-package minions
+  ;:custom
+  ;(minions-mode-line-lighter "⚙")
+  :config
+  (minions-mode))
+
+
+;;
+;; Mode-line - display clock
 ;;
 
 (setq display-time-24hr-format t)
