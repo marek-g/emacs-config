@@ -3,6 +3,7 @@
 
 (require 'marek-cheatsheet)
 (require 'marek-completion)
+(require 'marek-dashboard)
 (require 'marek-general-keys)
 (require 'marek-general-settings)
 (require 'marek-git)
