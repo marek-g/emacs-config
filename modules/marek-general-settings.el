@@ -16,3 +16,11 @@
 (tool-bar-mode -1) ; hide toolbar
 
 (provide 'marek-general-settings)
+
+;;
+;; Backup files
+;;
+
+;(setq make-backup-files nil) ; disable backups
+(setq backup-directory-alist            '((".*" . (concat temporary-file-directory ".EmacsBackupFiles"))))
+(setq backup-by-copying t)
