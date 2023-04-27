@@ -22,5 +22,5 @@
 ;;
 
 ;(setq make-backup-files nil) ; disable backups
-(setq backup-directory-alist            '((".*" . (concat temporary-file-directory ".EmacsBackupFiles"))))
+(setq backup-directory-alist            (list (cons ".*" (concat temporary-file-directory ".EmacsBackupFiles"))))
 (setq backup-by-copying t)
