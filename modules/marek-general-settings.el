@@ -13,7 +13,30 @@
 
 (set-window-scroll-bars (minibuffer-window) nil nil) ; hide scroll bar from mini-buffer
 
-(tool-bar-mode -1) ; hide toolbar
+(if (not ANDROID-P)
+    (tool-bar-mode -1) ; hide toolbar on non Android system
+
+  ;; configure toolbar on Android
+  (progn
+    (defun android-hide-keyboard ()
+      "hides keyboard"
+      (interactive)
+      (frame-toggle-on-screen-keyboard (selected-frame) t))
+
+    (defun android-show-keyboard ()
+      "shows keyboard"
+      (interactive)
+      (frame-toggle-on-screen-keyboard (selected-frame) nil))
+
+    (tool-bar-add-item "keyboard_off" 'android-hide-keyboard
+		       'android-hide-keyboard
+		       :help   "Hide keyboard")
+
+    (tool-bar-add-item "keyboard" 'android-show-keyboard
+		       'android-show-keyboard
+		       :help   "Show keyboard")
+    )
+  )
 
 (provide 'marek-general-settings)
 
