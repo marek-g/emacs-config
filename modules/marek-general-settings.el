@@ -28,14 +28,19 @@
       (interactive)
       (frame-toggle-on-screen-keyboard (selected-frame) nil))
 
-    (tool-bar-add-item "keyboard_off" 'android-hide-keyboard
+    (tool-bar-add-item "sort-descending" 'android-hide-keyboard
 		       'android-hide-keyboard
 		       :help   "Hide keyboard")
 
-    (tool-bar-add-item "keyboard" 'android-show-keyboard
+    (tool-bar-add-item "sort-ascending" 'android-show-keyboard
 		       'android-show-keyboard
 		       :help   "Show keyboard")
     )
+  )
+
+;; show keyboard all the time on Android
+(when ANDROID-P
+  (setq touch-screen-display-keyboard t)
   )
 
 (provide 'marek-general-settings)
