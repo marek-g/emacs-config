@@ -73,7 +73,7 @@
 			     (face-attribute 'font-lock-comment-face :foreground) 0.25))
 	      :strings-fn
 	      (lambda (color)
-		(prism-blend color "white" 0.5)))))
+		(prism-blend color "white" 0.75)))))
 
 ;;
 ;; Mode-line - group all minor modes in a nested menu
