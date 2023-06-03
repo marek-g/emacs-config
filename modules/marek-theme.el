@@ -76,6 +76,22 @@
 		(prism-blend color "white" 0.75)))))
 
 ;;
+;; Org-mode
+;;
+
+(setq org-fontify-whole-heading-line t)
+(set-face-attribute 'org-document-title nil :height 2.0)
+(set-face-attribute 'org-level-1 nil :foreground "#AF0" :background "#121" :height 1.3 :overline "#050")
+(set-face-attribute 'org-level-2 nil :foreground "#0F0" :height 1.1)
+(set-face-attribute 'org-level-3 nil :foreground "#0FF" :height 1.0)
+(set-face-attribute 'org-level-4 nil :foreground "#0AA" :height 1.0)
+(set-face-attribute 'org-level-5 nil :foreground "#088" :height 1.0)
+(set-face-attribute 'org-level-6 nil :foreground "#055" :height 1.0)
+(set-face-attribute 'org-block-begin-line nil :background "#010" :overline "grey")
+(set-face-attribute 'org-block nil :background "#010")
+(set-face-attribute 'org-block-end-line nil :background "#010" :underline "grey" :overline nil)
+
+;;
 ;; Mode-line - group all minor modes in a nested menu
 ;;
 

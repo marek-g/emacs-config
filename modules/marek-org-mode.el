@@ -14,4 +14,13 @@
 ;; allow to select text with shift
 (setq org-support-shift-select t)
 
+;; Make the indentation look nicer
+(setq org-startup-indented t)
+
+;; Show inline images
+(setq org-startup-with-inline-images t)
+
+;; Hide the markers so you just see bold text as BOLD-TEXT and not *BOLD-TEXT*
+(setq org-hide-emphasis-markers t)
+
 (provide 'marek-org-mode)
