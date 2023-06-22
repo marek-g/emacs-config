@@ -19,6 +19,7 @@
 
 ;; Show inline images
 (setq org-startup-with-inline-images t)
+(setq org-image-actual-width (list 750))
 
 ;; Hide the markers so you just see bold text as BOLD-TEXT and not *BOLD-TEXT*
 (setq org-hide-emphasis-markers t)
