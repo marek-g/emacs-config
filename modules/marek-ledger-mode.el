@@ -10,6 +10,7 @@
       ("reg" "%(binary) -f %(ledger-file) reg")
       ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
       ("account" "%(binary) -f %(ledger-file) reg %(account)")))
+    (custom-set-faces '(ledger-font-payee-uncleared-face ((t (:inherit nil :foreground "orange red")))))
   :mode "\\.ledger\\'")
 
 (provide 'marek-ledger-mode)
