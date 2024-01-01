@@ -52,28 +52,27 @@
 (use-package prism
   :config
   (add-hook 'emacs-lisp-mode-hook 'prism-mode)
-  (add-hook 'prism-mode-hook
-	    (prism-set-colors
-	      :num 32
-	      :desaturations (cl-loop for i from 0 below 32
-				      collect (* i 2.5))
-	      :lightens (cl-loop for i from 0 below 32
-				 collect 0)
-	      :colors (list "#fb00b3" ;; magenta
-			    "#f41239" ;; r
-			    "#e17756" ;; o
-			    "#c8c256" ;; y
-			    "#03ce56" ;; g
-			    "#00a0ee" ;; c
-			    "#4750ff" ;; b
-			    "#a136ff") ;; purp
-	      :comments-fn
-	      (lambda (color)
-		(prism-blend color
-			     (face-attribute 'font-lock-comment-face :foreground) 0.25))
-	      :strings-fn
-	      (lambda (color)
-		(prism-blend color "white" 0.75)))))
+  (prism-set-colors
+    :num 32
+    :desaturations (cl-loop for i from 0 below 32
+			    collect (* i 2.5))
+    :lightens (cl-loop for i from 0 below 32
+		       collect 0)
+    :colors (list "#fb00b3" ;; magenta
+		  "#f41239" ;; r
+		  "#e17756" ;; o
+		  "#c8c256" ;; y
+		  "#03ce56" ;; g
+		  "#00a0ee" ;; c
+		  "#4750ff" ;; b
+		  "#a136ff") ;; purp
+    :comments-fn
+    (lambda (color)
+      (prism-blend color
+		   (face-attribute 'font-lock-comment-face :foreground) 0.25))
+    :strings-fn
+    (lambda (color)
+	    (prism-blend color "white" 0.75))))
 
 ;;
 ;; Org-mode
