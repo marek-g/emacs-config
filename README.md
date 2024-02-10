@@ -1,6 +1,36 @@
 # My Emacs configuration
 
-## Linux setup
+## Keyboard setup
+
+This configuration assumes that `CapsLock` key is mapped to `Control` key and `Control` key is mapped to `ContextMenu` in the system when `Emacs` window is active. For that you need to install and configure one of the system keymappers that are appliaction aware. One of them is [keymapper](https://github.com/houmain/keymapper), but you can use any other that works for you.
+
+The reason for that mapping is to make standard `Ctrl + X`, `Ctrl + C`, `Ctrl + V` etc. keybindings working with `Emacs` without breaking any standard `Emacs` behavior. There are other solutions like `cua-mode` or `wakib-keys` packages, but they are not working perfectly in every case. Remapping the keys on the system level makes it both - convinent to use and 100% compatible with `Emacs` standard key bindings. `C-x` and `C-c` `Emacs` prefixes are working perfectly fine with `CapsLock` key.
+
+### Windows setup (both native & WSL)
+
+1. Install [keymapper](https://github.com/houmain/keymapper/releases).
+2. Create `keymapper.conf` file in `AppData/Local` folder:
+
+```
+[title="/GNU Emacs/"]
+CapsLock >> Control
+Control >> ContextMenu
+```
+
+### Linux setup (TODO)
+
+1. Install [keymapper](https://github.com/houmain/keymapper/releases).
+2. Create `keymapper.conf` file in `AppData/Local` folder:
+
+```
+[title="/GNU Emacs/"]
+CapsLock >> Control
+Control >> ContextMenu
+```
+
+## Download configuration
+
+### Linux
 
 ``` sh
 git clone https://github.com/marek-g/emacs-config ~/.config/emacs
