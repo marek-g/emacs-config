@@ -1,29 +1,8 @@
-(add-to-list 'package-selected-packages 'wakib-keys)
-(use-package wakib-keys
-  :diminish wakib-keys
-  :config
-  (wakib-keys 1)
-  (add-hook 'after-change-major-mode-hook 'wakib-update-major-mode-map)
-  (add-hook 'menu-bar-update-hook 'wakib-update-minor-mode-maps)
-  ;; killing the buffer is moved to C-k
-  (define-key wakib-keys-overriding-map (kbd "C-k") 'kill-current-buffer)
-  ;; split window horizontally
-  (define-key wakib-keys-overriding-map (kbd "s-h") 'split-window-right)
-  ;; split window vertically
-  (define-key wakib-keys-overriding-map (kbd "s-v") 'split-window-below)
-  ;; delete window
-  (define-key wakib-keys-overriding-map (kbd "s-k") 'delete-window)
-  ;; remove escape from map
-  (define-key wakib-keys-overriding-map (kbd "<escape>") nil)
-  ;; change 'isearch-backward to 'projectile-ripgrep
-  (define-key wakib-keys-overriding-map (kbd "C-S-f") 'projectile-ripgrep)
-  ;; decrease font size
-  ;;(define-key wakib-keys-overriding-map (kbd "C--") nil)
-  ;;(define-key wakib-keys-overriding-map (kbd "C-<kp-subtract>") 'text-scale-decrease)
-  ;; increase font size
-  ;;(define-key wakib-keys-overriding-map (kbd "C-=") nil)
-  ;;(define-key wakib-keys-overriding-map (kbd "C-<kp-add>") 'text-scale-increase)
-)
+;; TODO:
+;; - ctrl+w ('kill-current-buffer)
+;; - window management ('split-window-right, 'split-window-below, 'delete-window)
+;; - ctrl+shift+f ('projectile-ripgrep)
+;; - C-- 'text-scale-decrease (what about negative C-u?), C-+ 'text-scale-increase
 
 ;;
 ;; vundo (visual undo-tree)
@@ -39,22 +18,22 @@
     '(vundo-highlight ((t (:foreground "#FFFF00")))))
 )
 
-; redo
+(global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'vundo)
-(global-set-key (kbd "C-y") 'undo-redo)
+;(global-set-key (kbd "C-y") 'undo-redo)
 
 ;;
 ;; search
 ;;
 (define-key isearch-mode-map (kbd "C-f") 'isearch-forward)
 (define-key isearch-mode-map (kbd "M-f") 'isearch-forward-regexp)
-(define-key global-map (kbd "<f3>") 'isearch-repeat-forward)
-(define-key global-map (kbd "S-<f3>") 'isearch-repeat-backward)
-(define-key global-map (kbd "C-<f3>") 'isearch-exit) ;; stops repeat search - TODO: find a way to ESC do the same
+;(define-key global-map (kbd "<f3>") 'isearch-repeat-forward)
+;(define-key global-map (kbd "S-<f3>") 'isearch-repeat-backward)
+;(define-key global-map (kbd "C-<f3>") 'isearch-exit) ;; stops repeat search - TODO: find a way to ESC do the same
 (define-key isearch-mode-map (kbd "<up>") 'isearch-ring-retreat)
 (define-key isearch-mode-map (kbd "<down>") 'isearch-ring-advance)
-(define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
-(define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
+;(define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
+;(define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
 
 ;;
 ;; Navigate back and forward between visited places
@@ -98,7 +77,7 @@ If point was already at that position, move point to beginning of line."
 ;;
 ;; <menu> leader key key-map
 ;;
-;; on Linux, the menu/apps key syntax is <menu>
+;; On Linux, the menu/apps key syntax is <menu>
 ;; on Windows, the menu/apps key syntax is <apps>
 ;; make the syntax equal and make <menu> key leader key
 ;;
@@ -106,10 +85,8 @@ If point was already at that position, move point to beginning of line."
 (global-unset-key [apps])
 (global-unset-key [menu])
 
-(define-prefix-command 'menu-leader-key-map)
-(define-key menu-leader-key-map (kbd "RET") 'execute-extended-command)
-(define-key menu-leader-key-map (kbd "<menu>") 'exchange-point-and-mark)
-(define-key menu-leader-key-map (kbd "'") 'quoted-insert)
-(global-set-key (kbd "<menu>") 'menu-leader-key-map)
+;(global-set-key (kbd "<menu> x") 'kill-region)
+;(global-set-key (kbd "<menu> c") 'kill-ring-save)
+;(global-set-key (kbd "<menu> v") 'yank)
 
 (provide 'marek-general-keys)
