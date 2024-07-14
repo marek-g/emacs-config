@@ -20,7 +20,7 @@
 			    (?o delete-other-windows "Delete Other Windows")
 			    (?T aw-transpose-frame "Transpose Frame")
 			    ;; ?i ?r ?t are used by hyperbole.el
-			    (?? aw-show-dispatch-help)))
+			    (?? aw-show-dispatch-help))))
 
 ;; other-window / previous-window
 (global-set-key (kbd "C-.") #'other-window)
