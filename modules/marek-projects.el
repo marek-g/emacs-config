@@ -22,7 +22,7 @@
 
   (projectile-add-known-project "~/.config/emacs")
   (when HOMEDESKTOP-P
-    (setq projectile-project-search-path `(("~/Ext/Src" . 3) "/media/veracrypt1/dokumenty/Notatki")
+    (setq projectile-project-search-path `(("~/Ext/Src" . 3) "~/Ext/dokumenty/Notatki")
 	  ))
 
   (projectile-mode +1)
