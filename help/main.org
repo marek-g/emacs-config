@@ -1,0 +1,45 @@
+This is documentation of my Emacs style of usage.
+
+* Keyboard shortcuts
+
+** Help
+ =F1= - show / hide help cheatsheet
+=C-h= - Emacs' help
+
+** Text Edit
+    =C-z= - undo
+    =C-y= - redo
+  =C-S-z= - vundo (undo tree)
+
+** Macros
+          =C-e (= - start recording keyboard macro
+          =C-e )= - stop recording keyboard macro
+  =(C-u N) C-e e= - execute keyboard macro (optionally repeat N times, where N = 0 - till EOF)
+
+** Search
+   =C-f= - search
+    =F3= - search repeat forward
+  =S-F3= - search repeat backward
+  =C-F3= - exit search mode
+
+** Navigation
+  =C-M-<left>=, =C-M-<right>= - previous, next element, same level
+     =C-M-<up>=, =C-M-<down>= - element level up, element level down
+             =C-M-p=, =C-M-n= - previous, next parentheses on the same level
+                 =M-{=, =M-}= - previous, next paragraph
+      =M-<left>=, =M-<right>= - backward, forward location
+
+** Buffers
+           =C-n= - new buffer
+  =M-space=, =C-b= - switch buffer
+
+** Window management
+    =s-h= - split window horizontally
+    =s-v= - split window vertically
+    =s-k= - close window
+  =C-tab= - switch active window
+
+** Code
+                             =C-SPC= - completion
+                        =C-.=, =M-RET= - code action
+  =<F12>=, =M-<F12>=, =C-<F12>=, =S-<F12>= - find definition, type definition, declaration, references

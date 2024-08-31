@@ -1,13 +1,13 @@
 ;; Add the modules folder to the load path
 (add-to-list 'load-path (expand-file-name "modules/" user-emacs-directory))
 
-(require 'marek-cheatsheet)
 (require 'marek-completion)
 (when (not ANDROID-P)
   (require 'marek-dashboard))
 (require 'marek-general-keys)
 (require 'marek-general-settings)
 (require 'marek-git)
+(require 'marek-help)
 (require 'marek-ledger-mode)
 (require 'marek-markdown-mode)
 (require 'marek-org-mode)

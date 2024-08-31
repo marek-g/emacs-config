@@ -89,6 +89,7 @@
 (set-face-attribute 'org-block-begin-line nil :background "#010" :overline "grey")
 (set-face-attribute 'org-block nil :background "#010")
 (set-face-attribute 'org-block-end-line nil :background "#010" :underline "grey" :overline nil)
+(set-face-attribute 'org-verbatim nil :foreground "orange")
 
 ;;
 ;; Mode-line - group all minor modes in a nested menu
