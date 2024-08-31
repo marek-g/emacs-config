@@ -21,7 +21,7 @@
 	projectile-known-projects-file (expand-file-name ".cache/projectile-known-projects.eld" user-emacs-directory))
 
   (projectile-add-known-project "~/.config/emacs")
-  (when HOMEDESKTOP-P
+  (when HOME-LINUX-P
     (setq projectile-project-search-path `(("~/Ext/Src" . 3) "~/Ext/dokumenty/Notatki")
 	  ))
 
