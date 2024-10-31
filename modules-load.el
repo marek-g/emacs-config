@@ -22,3 +22,5 @@
   (require 'marek-lsp-python))
 (when LSP-RUST-P
   (require 'marek-lsp-rust))
+(when LSP-JAVA-P
+  (require 'marek-lsp-java))
