@@ -49,11 +49,6 @@
   )
 
 ;;
-;; Map Escape to cancel (like C-g)
-;;
-(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
-
-;;
 ;; Switch buffers
 ;;
 (global-set-key (kbd "M-SPC") 'switch-to-buffer) ; switch to buffer
