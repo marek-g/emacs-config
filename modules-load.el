@@ -4,6 +4,7 @@
 (require 'marek-completion)
 (when (not ANDROID-P)
   (require 'marek-dashboard))
+(require 'marek-dired)
 (require 'marek-general-keys)
 (require 'marek-general-settings)
 (require 'marek-git)
