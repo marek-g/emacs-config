@@ -43,3 +43,11 @@ This is documentation of my Emacs style of usage.
                              =C-SPC= - completion
                         =C-.=, =M-RET= - code action
   =<F12>=, =M-<F12>=, =C-<F12>=, =S-<F12>= - find definition, type definition, declaration, references
+
+* Reading logs
+
+** Text highlighting
+
+               =M-x highlight-phrase= - highlight phrase
+=M-x highlight-lines-matching-regexp= - highlight line
+             =M-x unhighlight-regexp= - choose which phrase to unhighlight
