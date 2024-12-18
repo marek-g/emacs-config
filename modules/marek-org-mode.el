@@ -11,6 +11,9 @@
 
 (setq org-agenda-files (list (concat org-directory "Todo.org")))
 
+;; TODO keywords
+(setq org-todo-keywords '((sequence "TODO" "INPROGRESS" "DONE")))
+
 ;; allow to select text with shift
 (setq org-support-shift-select t)
 
