@@ -24,9 +24,8 @@
 
 (when ANDROID-P
   ;; Add Termux binaries to PATH environment
-  (let ((termuxpath "/data/data/com.termux/files/usr/bin"))
-    (setenv "PATH" (format "%s:%s" termuxpath (getenv "PATH")))
-    (push termuxpath exec-path))
+  (setq exec-path '("/data/data/com.termux/files/usr/bin" "."))
+  (setenv "PATH" "/data/data/com.termux/files/usr/bin:.")
 )
 
 ;;
