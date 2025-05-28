@@ -26,6 +26,9 @@
   ;; Add Termux binaries to PATH environment
   (setq exec-path '("/data/data/com.termux/files/usr/bin" "."))
   (setenv "PATH" "/data/data/com.termux/files/usr/bin:.")
+
+  ;; faster command execution (disable system call tracing)
+  (setq android-use-exec-loader 'nil)
 )
 
 ;;
