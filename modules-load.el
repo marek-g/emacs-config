@@ -15,6 +15,7 @@
 (require 'marek-popup-menu)
 (require 'marek-projects)
 (require 'marek-theme)
+(require 'marek-toolbar)
 (require 'marek-window-management)
 
 (when LSP-P
