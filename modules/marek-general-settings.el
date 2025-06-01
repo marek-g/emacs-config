@@ -13,20 +13,17 @@
 
 (set-window-scroll-bars (minibuffer-window) nil nil) ; hide scroll bar from mini-buffer
 
-(if (not ANDROID-P)
-    (tool-bar-mode -1)) ; hide toolbar on non Android system
-
 ;; show keyboard all the time on Android
 (when ANDROID-P
   (setq touch-screen-display-keyboard t)
   )
 
-(provide 'marek-general-settings)
-
 ;;
-;; Backup files
+;; backup files
 ;;
 
 ;(setq make-backup-files nil) ; disable backups
 (setq backup-directory-alist            (list (cons ".*" (concat temporary-file-directory ".EmacsBackupFiles"))))
 (setq backup-by-copying t)
+
+(provide 'marek-general-settings)
