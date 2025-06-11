@@ -133,5 +133,14 @@
 
 (display-time-mode 1)
 
+;;
+;; Tab-bar
+;;
+
+(tab-bar-mode t)
+
+;; add menu icon to the tab-bar
+(add-to-list 'tab-bar-format #'tab-bar-format-menu-bar)
+
 
 (provide 'marek-theme)
