@@ -9,7 +9,7 @@
 (when HOME-LINUX-P
   (setq org-directory "~/Ext/dokumenty/Notatki/private_notes/Todo/"))
 
-(setq org-agenda-files (list (concat org-directory "Todo.org")))
+;;(setq org-agenda-files (list (concat org-directory "Todo.org")))
 
 ;; TODO keywords
 (setq org-todo-keywords '((sequence "TODO" "BLOCKED" "INPROGRESS" "REVIEW" "DONE")))
