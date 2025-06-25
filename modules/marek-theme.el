@@ -2,7 +2,8 @@
 ;; Loads a nice blue theme.
 ;;
 
-(load-theme 'deeper-blue t)
+;(load-theme 'deeper-blue t)
+(load-theme `modus-vivendi t)
 
 ;;
 ;; Change some colors
@@ -11,7 +12,14 @@
 (set-face-foreground 'font-lock-comment-face "forest green") ; comment
 (set-face-foreground 'font-lock-doc-face "lime green") ; doc comment
 
-(set-face-background 'mode-line "chocolate") ; mode-line background
+;;
+;; Mode-line look
+;;
+
+(set-face-attribute 'mode-line nil :background "gray75" :foreground "black" :box `(:line-width 1 :style released-button))
+(set-face-attribute 'mode-line-buffer-id nil :weight `bold :background `unspecified :foreground "gray30")
+(set-face-attribute 'mode-line-inactive nil :background "gray40" :foreground "black" :box `(:line-width 1 :color "gray40" :style nil))
+;(set-face-background 'mode-line "chocolate") ; mode-line background
 
 ;;
 ;; Change terminal ansi colors
