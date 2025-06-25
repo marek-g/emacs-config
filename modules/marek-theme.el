@@ -110,29 +110,6 @@
   :config
   (minions-mode))
 
-
-;;
-;; Mode-line - display clock
-;;
-
-(setq display-time-24hr-format t)
-(setq display-time-default-load-average nil) ; do not display CPU usage
-
- (defface egoge-display-time
-   '((((type x w32 mac))
-      (:foreground "gold" :inherit bold))
-     (((type tty))
-      (:foreground "gold")))
-   "Face used to display the time in the mode line.")
-
- ;; This causes the current time in the mode line to be displayed in
- ;; `egoge-display-time-face' to make it stand out visually.
- (setq display-time-string-forms
-       '((propertize (concat " " 24-hours ":" minutes " ")
- 		    'face 'egoge-display-time)))
-
-(display-time-mode 1)
-
 ;;
 ;; Tab-bar
 ;;
@@ -142,5 +119,28 @@
 ;; add menu icon to the tab-bar
 (add-to-list 'tab-bar-format #'tab-bar-format-menu-bar)
 
+;;
+;; Clock on tab-bar
+;;
+
+(defface egoge-display-time
+  '((((type x w32 mac))
+     (:foreground "gold" :inherit bold))
+    (((type tty))
+     (:foreground "gold")))
+  "Face used to display the time in the mode line.")
+
+;; This causes the current time in the mode line to be displayed in
+;; `egoge-display-time-face' to make it stand out visually.
+(setq display-time-string-forms
+      '((propertize (concat " " 24-hours ":" minutes " ")
+ 		     'face 'egoge-display-time)))
+
+;; add clock to the tab-bar
+(add-to-list 'tab-bar-format 'tab-bar-format-align-right 'append)
+(add-to-list 'tab-bar-format 'tab-bar-format-global 'append)
+(setq display-time-format "%H:%M")
+(setq display-time-default-load-average nil) ; do not display CPU usage
+(display-time-mode 1)
 
 (provide 'marek-theme)
