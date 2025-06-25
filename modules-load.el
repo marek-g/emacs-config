@@ -16,6 +16,7 @@
 (require 'marek-projects)
 (require 'marek-theme)
 (require 'marek-toolbar)
+(require 'marek-treesitter)
 (require 'marek-window-management)
 
 (when LSP-P
