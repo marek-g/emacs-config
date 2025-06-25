@@ -6,6 +6,7 @@
 
 (delete-selection-mode t) ; enable deleting selected text when typing
 (setq-default indent-tabs-mode t) ; enable tabs
+(setq visual-line-fringe-indicators '(nil right-curly-arrow)) ; right arrow on wrapped lines
 (global-visual-line-mode t) ; enable long line wrapping
 (column-number-mode 1) ; show column in mode line
 
