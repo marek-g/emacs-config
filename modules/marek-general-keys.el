@@ -22,6 +22,10 @@
 (global-set-key (kbd "C-S-z") 'vundo)
 ;(global-set-key (kbd "C-y") 'undo-redo)
 
+
+;; duplicate current line or region
+(global-set-key (kbd "C-M-d") 'duplicate-dwim)
+
 ;;
 ;; search
 ;;
