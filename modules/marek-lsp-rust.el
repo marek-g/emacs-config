@@ -5,11 +5,14 @@
 
 (add-to-list 'package-selected-packages 'rustic)
 (add-to-list 'package-selected-packages 'dap-cpptools)
-(use-package rustic
+
+;; make rust-mode to derive from rust-ts-mode
+;; as rustic is based on rust-mode
+(use-package rust-mode
   :init
-  (progn
-       (require 'rust-ts-mode)
-       (add-hook 'rust-mode-hook 'rust-ts-mode))
+  (setq rust-mode-treesitter-derive t))
+
+(use-package rustic
   :config
   (setq rustic-format-on-save t)
 
