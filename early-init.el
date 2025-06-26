@@ -15,7 +15,7 @@
 
 (defconst LSP-JAVA-P nil) ;(defconst LSP-JAVA-P WORK-LINUX-P)
 (defconst LSP-PYTHON-P DESKTOP-P)
-(defconst LSP-RUST-P HOME-LINUX-P)
+(defconst LSP-RUST-P (or HOME-LINUX-P WORK-LINUX-P)
 (defconst LSP-P (or LSP-JAVA-P LSP-PYTHON-P LSP-RUST-P))
 
 ;;
