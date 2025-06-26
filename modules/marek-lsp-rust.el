@@ -6,6 +6,10 @@
 (add-to-list 'package-selected-packages 'rustic)
 (add-to-list 'package-selected-packages 'dap-cpptools)
 (use-package rustic
+  :init
+  (progn
+       (require 'rust-ts-mode)
+       (add-hook 'rust-mode-hook 'rust-ts-mode))
   :config
   (setq rustic-format-on-save t)
 
