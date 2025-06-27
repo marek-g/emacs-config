@@ -8,10 +8,11 @@
 
 ;; make rust-mode to derive from rust-ts-mode
 ;; as rustic is based on rust-mode
-(use-package rust-mode
-  :defer t
-  :init
-  (setq rust-mode-treesitter-derive t))
+;; (currently buggy - reports errors with using)
+;; (use-package rust-mode
+;;   :defer t
+;;   :init
+;;   (setq rust-mode-treesitter-derive t))
 
 (use-package rustic
   :config
