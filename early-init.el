@@ -48,3 +48,33 @@
     (if (version< emacs-version "29")
         (add-to-list 'native-comp-eln-load-path (convert-standard-filename (expand-file-name ".cache/eln-cache/" user-emacs-directory)))
       (startup-redirect-eln-cache (convert-standard-filename (expand-file-name ".cache/eln-cache/" user-emacs-directory))))))
+
+;;
+;; Garbage collection settings
+;;
+
+;; print messages about GC starting/stopping
+;;(setq garbage-collection-messages t)
+
+;; disable GC on startup
+(setq gc-cons-threshold most-positive-fixnum)
+
+;; after the startup
+(add-hook 'emacs-startup-hook
+	  (lambda ()
+	    (setq my-gc-cons-threshold (* 8 1024 1024))
+
+	    (setq gc-cons-threshold my-gc-cons-threshold)
+	    (setq gc-cons-percentage 0.5)
+
+	    ;; run gc collect when Emacs is idle
+	    (run-with-idle-timer 5 t #'garbage-collect)
+
+	    ;; disable garbage collection when in minibuffer
+	    (defun my-minibuffer-setup-hook ()
+	      (setq gc-cons-threshold most-positive-fixnum))
+	    (defun my-minibuffer-exit-hook ()
+	      (setq gc-cons-threshold my-gc-cons-threshold))
+	    (add-hook 'minibuffer-setup-hook #'my-minibuffer-setup-hook)
+	    (add-hook 'minibuffer-exit-hook #'my-minibuffer-exit-hook)
+))
