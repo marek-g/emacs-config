@@ -14,6 +14,7 @@
 (require 'marek-org-mode)
 (require 'marek-popup-menu)
 (require 'marek-projects)
+(require 'marek-search)
 (require 'marek-theme)
 (require 'marek-toolbar)
 (require 'marek-treesitter)
