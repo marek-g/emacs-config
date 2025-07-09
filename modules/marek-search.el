@@ -13,7 +13,9 @@
 (define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
 
 (add-to-list 'package-selected-packages 'casual)
-(require 'casual-isearch)
-(keymap-set isearch-mode-map "<f2>" #'casual-isearch-tmenu)
+(use-package casual
+  :config
+  (require 'casual-isearch)
+  (keymap-set isearch-mode-map "<f2>" #'casual-isearch-tmenu))
 
 (provide 'marek-search)
