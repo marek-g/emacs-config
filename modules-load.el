@@ -2,8 +2,7 @@
 (add-to-list 'load-path (expand-file-name "modules/" user-emacs-directory))
 
 (require 'marek-completion)
-(when (not ANDROID-P)
-  (require 'marek-dashboard))
+(require 'marek-dashboard)
 (require 'marek-dired)
 (require 'marek-general-keys)
 (require 'marek-general-settings)
