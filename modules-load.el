@@ -10,6 +10,7 @@
 (require 'marek-help)
 (require 'marek-ledger-mode)
 (require 'marek-markdown-mode)
+(require 'marek-notes)
 (require 'marek-org-mode)
 (require 'marek-popup-menu)
 (require 'marek-projects)
