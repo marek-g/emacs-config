@@ -11,9 +11,19 @@
       ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
       ("account" "%(binary) -f %(ledger-file) reg %(account)")))
   (custom-set-faces '(ledger-font-payee-uncleared-face ((t (:inherit nil :foreground "orange red")))))
+
   :config
   (unbind-key "S-<up>" ledger-mode-map)
   (unbind-key "S-<down>" ledger-mode-map)
+
+  :hook (ledger-mode . (lambda ()
+						 ;;
+						 ;; configure ledger-mode to work with tabs
+						 ;;
+						 (setq-default tab-width 4)
+						 (setq-default indent-tabs-mode t)
+						 (setq-default tab-always-indent nil)))
+
   :mode "\\.ledger\\'")
 
 (provide 'marek-ledger-mode)
