@@ -11,7 +11,10 @@
 (add-to-list 'package-selected-packages 'denote)
 (use-package denote
   :config
-  (setq denote-directory (expand-file-name "~/Documents/notes/")))
+  (setq denote-directory (cond
+			  (ANDROID-P (expand-file-name "~/storage/Documents/Notatki/Temporary/"))
+			  (t (expand-file-name "~/Documents/Temporary/"))
+			  )))
 
 
 ;;
