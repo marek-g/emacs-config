@@ -29,7 +29,7 @@
   (let ((files (denote-directory-files)))
     (mapcar (lambda (file)
               (list
-               :title (denote-retrieve-filename-title file)
+               :title (mapconcat 'identity (split-string (denote-retrieve-filename-title file) "-") " ")
                :file  file))
             (dashboard-subseq (reverse files) list-size))))
 
