@@ -11,6 +11,7 @@
 (add-to-list 'package-selected-packages 'denote)
 (use-package denote
   :config
+  (denote-rename-buffer-mode)
   (setq denote-directory (cond
 			  (ANDROID-P (expand-file-name "~/storage/Documents/Notatki/Temporary/"))
 			  (t (expand-file-name "~/Documents/Temporary/"))
