@@ -25,6 +25,19 @@
     (setq projectile-project-search-path `(("~/Ext/Src" . 3) "~/Ext/dokumenty/Notatki")
 	  ))
 
+  ;; projectile's bug workaround
+  ;; https://github.com/bbatsov/projectile/issues/1816
+  ;; cannot create files (find-file) when
+  ;; you don't have permissions to
+  ;; some subfolder on the path to the file
+  (defun my-safe-projectile-expand-file-name-wildcard (old-func &rest args)
+  "Swallow errors and return the same fallback as original function."
+  (condition-case nil
+      (apply old-func args)
+    (file-error (expand-file-name (car args) (cadr args)))))
+(advice-add #'projectile-expand-file-name-wildcard :around #'my-safe-projectile-expand-file-name-wildcard)
+
+
   (projectile-mode +1)
   :bind (:map projectile-mode-map
               ("C-c p" . projectile-command-map)))
