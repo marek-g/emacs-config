@@ -1,7 +1,6 @@
 ;; TODO:
 ;; - ctrl+w ('kill-current-buffer)
 ;; - window management ('split-window-right, 'split-window-below, 'delete-window)
-;; - ctrl+shift+f ('projectile-ripgrep)
 ;; - C-- 'text-scale-decrease (what about negative C-u?), C-+ 'text-scale-increase
 
 ;;
