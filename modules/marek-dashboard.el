@@ -3,10 +3,9 @@
   :init
   (dashboard-setup-startup-hook)
   :config
-  (when (not ANDROID-P)
-    (setq
-     dashboard-startup-banner (concat user-emacs-directory "media/xemacs_color.svg")))
   (setq
+   dashboard-startup-banner (concat user-emacs-directory "media/xemacs_color.svg")
+   dashboard-image-banner-max-width 256
    dashboard-set-navigator t
    dashboard-center-content t
    dashboard-set-heading-icons t
