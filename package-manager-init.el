@@ -7,8 +7,8 @@
 ;; manually manage list of selected packages, so they are not added automatically to init.el
 ;; you can install packages with (package-install-selected-packages)
 ;; you can remove packages with (package-autoremove)
-(setq package-selected-packages
-  '(use-package))
+(setq package-selected-packages '(use-package))
+(setq package-vc-selected-packages '())
 
 ;; initialize package manager
 (package-initialize)

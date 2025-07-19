@@ -20,4 +20,17 @@
 	(typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
 	(yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
+(add-to-list 'package-vc-selected-packages '(combobulate :url "https://github.com/chaoyi/combobulate.git"))
+(package-vc-install-selected-packages)
+(use-package combobulate
+  ;;:vc (:url "https://github.com/chaoyi/combobulate.git" :lisp-dir "./")
+  :load-path (lambda () (convert-standard-filename (expand-file-name "elpa/combobulate/" user-emacs-directory)))
+  :custom
+  ;; You can customize Combobulate's key prefix here.
+  ;; Note that you may have to restart Emacs for this to take effect!
+  (combobulate-key-prefix "C-c o")
+  :hook ((prog-mode . combobulate-mode))
+  )
+
+
 (provide 'marek-treesitter)
