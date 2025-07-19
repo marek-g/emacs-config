@@ -13,6 +13,10 @@
 (add-to-list 'package-selected-packages 'ripgrep)
 (use-package ripgrep)
 
+(use-package project
+  :config
+  (setq project-vc-extra-root-markers '(".project.el" ".projectile" )))
+
 (add-to-list 'package-selected-packages 'treemacs-magit)
 (use-package treemacs-magit
   :after (treemacs magit))
