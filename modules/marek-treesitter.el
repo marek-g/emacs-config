@@ -29,6 +29,16 @@
   ;; You can customize Combobulate's key prefix here.
   ;; Note that you may have to restart Emacs for this to take effect!
   (combobulate-key-prefix "C-c o")
+  :bind (:map combobulate-key-map
+	      ("C-M-<left>" . combobulate-navigate-previous)
+	      ("C-M-<right>" . combobulate-navigate-next)
+	      ("C-M-<up>" . combobulate-navigate-up)
+	      ("C-M-<down>" . combobulate-navigate-down)
+	      ("C-M-<home>" . combobulate-navigate-beginning-of-defun)
+	      ("C-M-<end>" . combobulate-navigate-end-of-defun)
+	      ("C-M-<prior>" . combobulate-navigate-sequence-previous)
+	      ("C-M-<next>" . combobulate-navigate-sequence-next)
+	      ("C-M-S-<left>" . combobulate-mark-node-dwim))
   :hook ((prog-mode . combobulate-mode))
   )
 
