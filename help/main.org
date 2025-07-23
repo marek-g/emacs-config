@@ -6,6 +6,9 @@ This is documentation of my Emacs style of usage.
  =F1= - show / hide help cheatsheet
 =C-h= - Emacs' help
 
+** Clipboard
+=Ext-X= - cut, =Ext-C= - copy, =Ext-V= - paste, =Ext-M-V= - paste from history
+
 ** Text Edit
     =C-z= - undo
     =C-y= - redo
