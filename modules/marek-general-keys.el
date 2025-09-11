@@ -3,6 +3,12 @@
 ;; - window management ('split-window-right, 'split-window-below, 'delete-window)
 ;; - C-- 'text-scale-decrease (what about negative C-u?), C-+ 'text-scale-increase
 
+;; enable CUA-mode
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+
 ;;
 ;; vundo (visual undo-tree)
 ;;
