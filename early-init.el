@@ -4,7 +4,7 @@
 
 (defconst ANDROID-P (string-equal system-type "android"))
 
-(defconst WORK-LINUX-P (string-equal (system-name) "WorkLaptop"))
+(defconst WORK-LINUX-P (or (string-equal (system-name) "WorkLaptop") (string-equal (system-name) "marek-worklaptop")))
 (defconst HOME-LINUX-P (or (string-equal (system-name) "marek-desktop") (string-equal (system-name) "marek-laptop")))
 
 (defconst DESKTOP-P (or WORK-LINUX-P HOME-LINUX-P))
