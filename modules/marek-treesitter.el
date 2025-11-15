@@ -20,11 +20,16 @@
 	(typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
 	(yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
-(add-to-list 'package-vc-selected-packages '(combobulate :url "https://github.com/chaoyi/combobulate.git"))
-(package-vc-install-selected-packages)
+;;(add-to-list 'package-vc-selected-packages '(combobulate :url "https://github.com/marek-g/combobulate.git" :branch "rust"))
+;;(package-vc-install-selected-packages)
 (use-package combobulate
+  :load-path ("~/Ext/Src/libs/3rdparty/combobulate/"
+                "~/Ext/Src/libs/3rdparty/combobulate/tests/")
+  :config
+  (require 'combobulate-test-prelude)
+  (require 'combobulate-debug)
   ;;:vc (:url "https://github.com/chaoyi/combobulate.git" :lisp-dir "./")
-  :load-path (lambda () (convert-standard-filename (expand-file-name "elpa/combobulate/" user-emacs-directory)))
+  ;;:load-path (lambda () (convert-standard-filename (expand-file-name "elpa/combobulate/" user-emacs-directory)))
   :custom
   ;; You can customize Combobulate's key prefix here.
   ;; Note that you may have to restart Emacs for this to take effect!
@@ -38,7 +43,9 @@
 	      ("C-M-<end>" . combobulate-navigate-end-of-defun)
 	      ("C-M-<prior>" . combobulate-navigate-sequence-previous)
 	      ("C-M-<next>" . combobulate-navigate-sequence-next)
-	      ("C-M-S-<left>" . combobulate-mark-node-dwim))
+	      ("C-M-S-<left>" . combobulate-mark-node-dwim)
+	      ("M-<left>" . nil)
+	      ("M-<right>" . nil))
   :hook ((prog-mode . combobulate-mode))
   )
 
