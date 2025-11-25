@@ -2,8 +2,12 @@
 ;; Loads a nice blue theme.
 ;;
 
-;(load-theme 'deeper-blue t)
-(load-theme `modus-vivendi t)
+;;(load-theme 'deeper-blue t)
+;;(load-theme `modus-vivendi t)
+(load-theme `fleury t)
+
+;; Set default cursor type
+(setq-default cursor-type 'box)
 
 ;;
 ;; Change some colors
@@ -37,12 +41,13 @@
 ;; Default font
 ;;
 
-(when DESKTOP-P
-  (let ((my-font (font-spec :family "Iosevka" :weight 'normal :width 'expanded :size 16)))
-    (unless (find-font my-font) (setq my-font (font-spec :size 16)))
-    (set-frame-font my-font nil t)
-  )
-)
+;; (when DESKTOP-P
+;;   (let ((my-font (font-spec :family "Iosevka" :weight 'normal :width 'expanded :size 12)))
+;;     (unless (find-font my-font) (setq my-font (font-spec :size 12)))
+;;     (set-frame-font my-font nil t)
+;;   )
+;; )
+(set-frame-font "Monospace-12" nil t)
 
 ;;
 ;; Scale
@@ -123,6 +128,19 @@
 ;;
 
 (tab-bar-mode t)
+
+(set-face-attribute 'tab-bar nil
+                    :background "#1c1c1c"
+                    :foreground "#ffffff")
+
+(set-face-attribute 'tab-bar-tab nil
+                    :background "#3a3a3a"
+                    :foreground "#ffccff"
+                    :box '(:line-width 2 :color "#3a3a3a"))
+
+(set-face-attribute 'tab-bar-tab-inactive nil
+                    :background "#2a2a2a"
+                    :foreground "#888888")
 
 ;; add menu icon to the tab-bar
 (add-to-list 'tab-bar-format #'tab-bar-format-menu-bar)

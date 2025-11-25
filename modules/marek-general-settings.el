@@ -14,6 +14,9 @@
 
 (set-window-scroll-bars (minibuffer-window) nil nil) ; hide scroll bar from mini-buffer
 
+;; disable ring bell (both sound and flashing)
+(setq ring-bell-function 'ignore)
+
 ;; show keyboard all the time on Android
 (when ANDROID-P
   (setq touch-screen-display-keyboard t)

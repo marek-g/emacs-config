@@ -55,7 +55,8 @@
   :bind (:map company-mode-map
 	      ("C-SPC" . company-complete))
   :config
-  (setq company-idle-delay 0.1) ;; how long to wait until popup
+  (setq company-idle-delay 0.0) ;; how long to wait until popup
+  (setq company-minimum-prefix-length 1)
   :hook (after-init . global-company-mode))
 
 (provide 'marek-completion)
