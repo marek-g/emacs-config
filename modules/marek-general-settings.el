@@ -17,6 +17,9 @@
 ;; disable ring bell (both sound and flashing)
 (setq ring-bell-function 'ignore)
 
+;; smooth buffer scrolling
+(pixel-scroll-precision-mode 1)
+
 ;; show keyboard all the time on Android
 (when ANDROID-P
   (setq touch-screen-display-keyboard t)
