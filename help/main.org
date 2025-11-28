@@ -14,6 +14,12 @@ This is documentation of my Emacs style of usage.
     =C-y= - redo
   =C-S-z= - vundo (undo tree)
 
+** Multiple cursors
+
+=C-S-c C-S-c= - turn a selection into multiple cursors, one per line
+  =C-> / C-<= - add cursors for next/previous matching text
+    =C-c C-<= - mark all matches in the buffer
+
 ** Macros
           =C-e (= - start recording keyboard macro
           =C-e )= - stop recording keyboard macro

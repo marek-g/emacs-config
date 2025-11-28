@@ -11,6 +11,7 @@
 (require 'marek-help)
 (require 'marek-ledger-mode)
 (require 'marek-markdown-mode)
+(require 'marek-multiple-cursors)
 (require 'marek-notes)
 (require 'marek-org-mode)
 (require 'marek-popup-menu)
