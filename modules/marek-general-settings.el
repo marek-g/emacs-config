@@ -18,7 +18,8 @@
 (setq ring-bell-function 'ignore)
 
 ;; smooth buffer scrolling
-(pixel-scroll-precision-mode 1)
+(unless WORK-LINUX-P
+  (pixel-scroll-precision-mode 1))
 
 ;; show keyboard all the time on Android
 (when ANDROID-P
