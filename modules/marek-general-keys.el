@@ -66,6 +66,14 @@ If point was already at that position, move point to beginning of line."
 (global-set-key [home] 'smart-beginning-of-line)
 
 ;;
+;; C-RET inserts new line below regardless of cursor position
+;;
+(global-set-key (kbd "C-<return>")
+                (lambda ()
+                  (interactive)
+                  (end-of-line)
+                  (newline-and-indent)))
+;;
 ;; <menu> leader key key-map
 ;;
 ;; On Linux, the menu/apps key syntax is <menu>
