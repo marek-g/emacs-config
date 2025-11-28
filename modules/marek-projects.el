@@ -4,7 +4,9 @@
   :config
   (setq treemacs-width-is-initially-locked nil ; allow resizing
         treemacs-width 30 ; initial size
-  )
+	)
+  ;; single mouse click expands a folder and opens a file
+  (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
   :bind
   (:map global-map
         ("<f9>" . treemacs))
