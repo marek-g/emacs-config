@@ -22,32 +22,33 @@
 
 ;;(add-to-list 'package-vc-selected-packages '(combobulate :url "https://github.com/marek-g/combobulate.git" :branch "rust"))
 ;;(package-vc-install-selected-packages)
-(use-package combobulate
-  :load-path ("~/Ext/Src/libs/3rdparty/combobulate/"
-                "~/Ext/Src/libs/3rdparty/combobulate/tests/")
-  :config
-  (require 'combobulate-test-prelude)
-  (require 'combobulate-debug)
-  ;;:vc (:url "https://github.com/chaoyi/combobulate.git" :lisp-dir "./")
-  ;;:load-path (lambda () (convert-standard-filename (expand-file-name "elpa/combobulate/" user-emacs-directory)))
-  :custom
-  ;; You can customize Combobulate's key prefix here.
-  ;; Note that you may have to restart Emacs for this to take effect!
-  (combobulate-key-prefix "C-c o")
-  :bind (:map combobulate-key-map
-	      ("C-M-<left>" . combobulate-navigate-previous)
-	      ("C-M-<right>" . combobulate-navigate-next)
-	      ("C-M-<up>" . combobulate-navigate-up)
-	      ("C-M-<down>" . combobulate-navigate-down)
-	      ("C-M-<home>" . combobulate-navigate-beginning-of-defun)
-	      ("C-M-<end>" . combobulate-navigate-end-of-defun)
-	      ("C-M-<prior>" . combobulate-navigate-sequence-previous)
-	      ("C-M-<next>" . combobulate-navigate-sequence-next)
-	      ("C-M-S-<left>" . combobulate-mark-node-dwim)
-	      ("M-<left>" . nil)
-	      ("M-<right>" . nil))
-  :hook ((prog-mode . combobulate-mode))
-  )
-
+(when HOME-LINUX-P
+	(use-package combobulate
+	:load-path ("~/Ext/Src/libs/3rdparty/combobulate/"
+					"~/Ext/Src/libs/3rdparty/combobulate/tests/")
+	:config
+	(require 'combobulate-test-prelude)
+	(require 'combobulate-debug)
+	;;:vc (:url "https://github.com/chaoyi/combobulate.git" :lisp-dir "./")
+	;;:load-path (lambda () (convert-standard-filename (expand-file-name "elpa/combobulate/" user-emacs-directory)))
+	:custom
+	;; You can customize Combobulate's key prefix here.
+	;; Note that you may have to restart Emacs for this to take effect!
+	(combobulate-key-prefix "C-c o")
+	:bind (:map combobulate-key-map
+			("C-M-<left>" . combobulate-navigate-previous)
+			("C-M-<right>" . combobulate-navigate-next)
+			("C-M-<up>" . combobulate-navigate-up)
+			("C-M-<down>" . combobulate-navigate-down)
+			("C-M-<home>" . combobulate-navigate-beginning-of-defun)
+			("C-M-<end>" . combobulate-navigate-end-of-defun)
+			("C-M-<prior>" . combobulate-navigate-sequence-previous)
+			("C-M-<next>" . combobulate-navigate-sequence-next)
+			("C-M-S-<left>" . combobulate-mark-node-dwim)
+			("M-<left>" . nil)
+			("M-<right>" . nil))
+	:hook ((prog-mode . combobulate-mode))
+	)
+)
 
 (provide 'marek-treesitter)
