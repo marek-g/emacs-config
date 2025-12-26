@@ -6,6 +6,10 @@
 ;;(load-theme `modus-vivendi t)
 (load-theme `fleury t)
 
+(add-to-list 'package-selected-packages 'color-theme-modern)
+(require 'color-theme-modern)
+(load-theme `cobalt t)
+
 ;; Set default cursor type
 (setq-default cursor-type 'box)
 
