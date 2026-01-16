@@ -4,11 +4,12 @@
 
 ;;(load-theme 'deeper-blue t)
 ;;(load-theme `modus-vivendi t)
-(load-theme `fleury t)
+;;(load-theme `fleury t)
 
 (add-to-list 'package-selected-packages 'color-theme-modern)
-(require 'color-theme-modern)
-(load-theme `cobalt t)
+(use-package color-theme-modern
+  :config
+  (load-theme 'cobalt t))
 
 ;; Set default cursor type
 (setq-default cursor-type 'box)
