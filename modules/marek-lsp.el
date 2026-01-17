@@ -3,7 +3,15 @@
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l"
-	lsp-session-file (expand-file-name ".cache/.lsp-session-v1" user-emacs-directory))
+		lsp-session-file (expand-file-name ".cache/.lsp-session-v1" user-emacs-directory))
+
+  :custom
+  ;; Mouse movement evants interrupt commands like ctrl+x b or isearch
+  ;; when the mouse is moved after the first key press
+  ;; so we have to remove tooltips unfortunately until better solution is found
+  ;; see: https://github.com/emacs-lsp/lsp-ui/issues/607
+  (lsp-ui-doc-enable nil)
+  
   :hook (lsp-mode . (lambda () (lsp-enable-which-key-integration) (superword-mode t)))
   :commands (lsp lsp-deferred)
   :bind
@@ -30,27 +38,20 @@
   :ensure t
   :hook ((lsp-mode . yas-minor-mode)))
 
+;; DAP mode (debugging)
 (add-to-list 'package-selected-packages 'dap-mode)
 (use-package dap-mode
-  :commands dap-debug
-  :bind
-  ;; (("<F5>" . dap-continue)
-  ;;  ("<F9>" . dap-breakpoint-toggle)
-  ;;  ("<F10>" . dap-next)
-  ;;  ("<F11>" . dap-step-in)
-  ;;  ("<S-F11>" . dap-step-out))
-  ;; (:map dap-mode-map
-  ;;  ("<F5>" . dap-continue)
-  ;;  ("<F9>" . dap-breakpoint-toggle)
-  ;;  ("<F10>" . dap-next)
-  ;;  ("<F11>" . dap-step-in)
-  ;;  ("<S-F11>" . dap-step-out))
+  :after lsp-mode
   :config
-  (dap-ui-mode 1)
-  (dap-tooltip-mode 1)
-  (tooltip-mode 1)
-  (dap-ui-controls-mode 1)
-  (add-hook 'dap-stopped-hook
-            (lambda (arg) (call-interactively #'dap-hydra))))
+  ;; Make sure that terminal programs open a term for I/O in an Emacs buffer
+  (setq dap-default-terminal-kind "integrated")
+  ;; Remove tooltip from features
+  ;; Mouse movement evants interrupt commands like ctrl+x b or isearch
+  ;; when the mouse is moved after the first key press
+  ;; so we have to remove tooltips unfortunately until better solution is found
+  ;; see: https://github.com/emacs-lsp/lsp-ui/issues/607
+  ;;(setq dap-auto-configure-features '(sessions locals controls tooltip)
+  (setq dap-auto-configure-features '(sessions locals controls))
+  (dap-auto-configure-mode))
 
 (provide 'marek-lsp)
