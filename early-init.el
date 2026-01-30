@@ -4,6 +4,10 @@
 
 (defconst ANDROID-P (string-equal system-type "android"))
 
+(let ((model (when ANDROID-P (string-trim (shell-command-to-string "getprop ro.product.model")))))
+  (defconst EINK-TABLET-P (and model (string-equal model "NoteAir5C")))
+)
+
 (defconst WORK-LINUX-P (or (string-equal (system-name) "WorkLaptop") (string-equal (system-name) "marek-worklaptop")))
 (defconst HOME-LINUX-P (or (string-equal (system-name) "marek-desktop") (string-equal (system-name) "marek-laptop")))
 
@@ -15,7 +19,7 @@
 
 (defconst LSP-JAVA-P WORK-LINUX-P)
 (defconst LSP-PYTHON-P DESKTOP-P)
-(defconst LSP-RUST-P (or HOME-LINUX-P WORK-LINUX-P))
+(defconst LSP-RUST-P (or HOME-LINUX-P WORK-LINUX-P EINK-TABLET-P))
 (defconst LSP-P (or LSP-JAVA-P LSP-PYTHON-P LSP-RUST-P))
 
 ;;

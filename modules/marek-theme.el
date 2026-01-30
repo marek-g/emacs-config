@@ -9,7 +9,12 @@
 (add-to-list 'package-selected-packages 'color-theme-modern)
 (use-package color-theme-modern
   :config
-  (load-theme (if WORK-LINUX-P 'lawrence 'cobalt) t))
+  (load-theme (cond
+   (EINK-TABLET-P 'modus-operandi)
+   (WORK-LINUX-P 'lawrence)
+   (t 'cobalt)
+  ) t)
+)
 
 ;; Set default cursor type
 (setq-default cursor-type 'box)
