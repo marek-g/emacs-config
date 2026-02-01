@@ -36,3 +36,11 @@
 (setq backup-by-copying t)
 
 (provide 'marek-general-settings)
+
+;;
+;; TRAMP
+;;
+
+;; configure TRAMP to respect the PATH variable on the remote machine (read .profile)
+(with-eval-after-load 'tramp
+  (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
