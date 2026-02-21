@@ -16,10 +16,13 @@
 ;; flash extends isearch for support of avy-like jump,
 ;; but jump letters never collide with text that can by typed and found
 ;;
+;; flash-treesitter is great for selecting code blocks
+;;
 (add-to-list 'package-selected-packages 'flash)
 (use-package flash
-  :commands (flash-jump flash-treesitter)
+  :demand t
   ;;:bind ("s-j" . flash-jump)
+  :bind ("C-c t" . flash-treesitter)
   :custom
   (flash-rainbow nil)
   (flash-backdrop nil)
