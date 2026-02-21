@@ -12,6 +12,24 @@
 (define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
 (define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
 
+;;
+;; flash extends isearch for support of avy-like jump,
+;; but jump letters never collide with text that can by typed and found
+;;
+(add-to-list 'package-selected-packages 'flash)
+(use-package flash
+  :commands (flash-jump flash-treesitter)
+  ;;:bind ("s-j" . flash-jump)
+  :custom
+  (flash-rainbow nil)
+  (flash-backdrop nil)
+  (flash-label-position 'before)
+  :config
+  (require 'flash-isearch)
+  (flash-isearch-mode 1)
+)
+
+
 (add-to-list 'package-selected-packages 'casual)
 (use-package casual
   :config
