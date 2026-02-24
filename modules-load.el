@@ -20,6 +20,7 @@
 (require 'marek-theme)
 (require 'marek-toolbar)
 (require 'marek-treesitter)
+(require 'marek-typst-mode)
 (require 'marek-window-management)
 
 (when LSP-P
