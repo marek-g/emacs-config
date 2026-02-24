@@ -26,7 +26,7 @@
   :custom
   (flash-rainbow nil)
   (flash-backdrop nil)
-  (flash-label-position 'before)
+  (flash-label-position 'overlay)
   :config
   (require 'flash-isearch)
   (flash-isearch-mode 1)
