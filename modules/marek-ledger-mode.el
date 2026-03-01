@@ -1,4 +1,3 @@
-(add-to-list 'package-selected-packages 'ledger-mode)
 (use-package ledger-mode
   :init
   (setq ledger-reconcile-default-commodity "PLN")

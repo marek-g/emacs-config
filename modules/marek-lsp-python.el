@@ -1,4 +1,3 @@
-(add-to-list 'package-selected-packages 'lsp-pyright)
 (use-package lsp-pyright
   :after lsp-mode
   :hook (python-mode . (lambda ()

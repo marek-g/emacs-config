@@ -6,16 +6,12 @@
 ;;(load-theme `modus-vivendi t)
 ;;(load-theme `fleury t)
 
-(add-to-list 'package-selected-packages 'doom-themes)
 (use-package doom-themes
-  :ensure t
   :config
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 
-(add-to-list 'package-selected-packages 'color-theme-modern)
 (use-package color-theme-modern
-  :ensure t
   :after doom-themes
   :config
   (load-theme (cond
@@ -80,7 +76,6 @@
 ;; Icons
 ;;
 
-(add-to-list 'package-selected-packages 'all-the-icons)
 (use-package all-the-icons
   :if (display-graphic-p))
 
@@ -88,7 +83,6 @@
 ;; Prism - color code based on depth
 ;;
 
-(add-to-list 'package-selected-packages 'prism)
 (use-package prism
   :config
   (add-hook 'emacs-lisp-mode-hook 'prism-mode)
@@ -135,7 +129,6 @@
 ;; Mode-line - group all minor modes in a nested menu
 ;;
 
-(add-to-list 'package-selected-packages 'minions)
 (use-package minions
   ;:custom
   ;(minions-mode-line-lighter "⚙")

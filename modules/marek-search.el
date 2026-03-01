@@ -18,7 +18,6 @@
 ;;
 ;; flash-treesitter is great for selecting code blocks
 ;;
-(add-to-list 'package-selected-packages 'flash)
 (use-package flash
   :demand t
   ;;:bind ("s-j" . flash-jump)
@@ -33,7 +32,6 @@
 )
 
 
-(add-to-list 'package-selected-packages 'casual)
 (use-package casual
   :config
   (require 'casual-isearch)

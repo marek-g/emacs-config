@@ -8,7 +8,6 @@
 ;; Configure denote
 ;;
 
-(add-to-list 'package-selected-packages 'denote)
 (use-package denote
   :config
   (denote-rename-buffer-mode)

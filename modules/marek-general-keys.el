@@ -12,7 +12,6 @@
 ;;
 ;; vundo (visual undo-tree)
 ;;
-(add-to-list 'package-selected-packages 'vundo)
 (use-package vundo
   :config
   (setq vundo-compact-display t)
@@ -34,7 +33,6 @@
 ;;
 ;; Navigate back and forward between visited places
 ;;
-(add-to-list 'package-selected-packages 'backward-forward)
 (use-package backward-forward
   :config
   (backward-forward-mode t)

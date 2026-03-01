@@ -1,4 +1,3 @@
-(add-to-list 'package-selected-packages 'lsp-mode)
 (use-package lsp-mode
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
@@ -25,21 +24,17 @@
 	)
   )
 
-(add-to-list 'package-selected-packages 'lsp-ui)
 (use-package lsp-ui :commands lsp-ui-mode)
 
-(add-to-list 'package-selected-packages 'lsp-treemacs)
 (use-package lsp-treemacs :commands lsp-treemacs-errors-list
   :custom
   (lsp-treemacs-sync-mode 1))
 
-(add-to-list 'package-selected-packages 'yasnippet)
 (use-package yasnippet
   :ensure t
   :hook ((lsp-mode . yas-minor-mode)))
 
 ;; DAP mode (debugging)
-(add-to-list 'package-selected-packages 'dap-mode)
 (use-package dap-mode
   :after lsp-mode
   :config

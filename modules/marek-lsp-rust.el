@@ -3,8 +3,6 @@
 ;; Then you can open a project and 'M-x dap-edit-debug-template' to set up the template.
 ;;
 
-(add-to-list 'package-selected-packages 'rustic)
-
 ;; make rust-mode to derive from rust-ts-mode
 ;; as rustic is based on rust-mode
 ;; (currently buggy - reports errors with using)

@@ -1,4 +1,3 @@
-(add-to-list 'package-selected-packages 'dashboard)
 (use-package dashboard
   :init
   (dashboard-setup-startup-hook)
