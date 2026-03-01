@@ -6,13 +6,22 @@
 ;;(load-theme `modus-vivendi t)
 ;;(load-theme `fleury t)
 
+(add-to-list 'package-selected-packages 'doom-themes)
+(use-package doom-themes
+  :ensure t
+  :config
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+
 (add-to-list 'package-selected-packages 'color-theme-modern)
 (use-package color-theme-modern
+  :ensure t
+  :after doom-themes
   :config
   (load-theme (cond
    (EINK-TABLET-P 'modus-operandi)
    (WORK-LINUX-P 'lawrence)
-   (t 'cobalt)
+   (t 'doom-horizon)
   ) t)
 )
 
