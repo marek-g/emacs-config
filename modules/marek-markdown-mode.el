@@ -10,12 +10,12 @@
 
   :custom-face
   (markdown-header-delimiter-face ((t (:height 0.9))))
-  (markdown-header-face-1 ((t (:height 1.6 :weight extra-bold :foreground "#EBCB8B" :inherit markdown-header-face))))
-  (markdown-header-face-2 ((t (:height 1.4 :weight extra-bold :inherit markdown-header-face))))
-  (markdown-header-face-3 ((t (:height 1.2 :weight extra-bold :inherit markdown-header-face))))
-  (markdown-header-face-4 ((t (:height 1.15 :weight bold :inherit markdown-header-face))))
-  (markdown-header-face-5 ((t (:height 1.1 :weight bold :inherit markdown-header-face))))
-  (markdown-header-face-6 ((t (:height 1.05 :weight semi-bold :inherit markdown-header-face))))
+  (markdown-header-face-1 ((t (:height 1.6 :weight bold :foreground "#EBCB8B" :inherit markdown-header-face))))
+  (markdown-header-face-2 ((t (:height 1.4 :weight bold :inherit markdown-header-face))))
+  (markdown-header-face-3 ((t (:height 1.2 :weight bold :inherit markdown-header-face))))
+  (markdown-header-face-4 ((t (:height 1.15 :inherit markdown-header-face))))
+  (markdown-header-face-5 ((t (:height 1.1 :inherit markdown-header-face))))
+  (markdown-header-face-6 ((t (:height 1.05 :inherit markdown-header-face))))
 
   
   ;;
