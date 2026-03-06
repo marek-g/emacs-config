@@ -31,3 +31,6 @@
   (require 'marek-lsp-rust))
 (when LSP-JAVA-P
   (require 'marek-lsp-java))
+
+;(when HOME-LINUX-P
+;  (require 'marek-mail))
