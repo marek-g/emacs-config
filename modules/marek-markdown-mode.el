@@ -51,6 +51,6 @@
   ;;   (font-lock-add-keywords nil '((nb/unhide-current-line)) t)
   ;;   (add-hook 'post-command-hook #'nb/refontify-on-linemove nil t)
   ;; 	)
-  ;; )
+  )
 
 (provide 'marek-markdown-mode)
