@@ -10,6 +10,7 @@
 (define-key isearch-mode-map (kbd "<up>") 'isearch-ring-retreat)
 (define-key isearch-mode-map (kbd "<down>") 'isearch-ring-advance)
 (define-key isearch-mode-map (kbd "C-v") 'isearch-yank-kill)
+(define-key isearch-mode-map (kbd "S-<insert>") 'isearch-yank-kill)
 (define-key isearch-mode-map (kbd "M-d") 'isearch-delete-char)
 
 ;;
