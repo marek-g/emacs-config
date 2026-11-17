@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (use-package multiple-cursors
   :bind (("C-S-c C-S-c" . mc/edit-lines) ;; turn a selection into multiple cursors, one per line
          ("C->"         . mc/mark-next-like-this) ;; add cursors for next matching text

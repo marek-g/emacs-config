@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (use-package dashboard
   :init
   (dashboard-setup-startup-hook)

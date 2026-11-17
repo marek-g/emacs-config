@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (define-key global-map [f1] 'marek-help-toggle-window)
 
 (defun marek-help-toggle-window()

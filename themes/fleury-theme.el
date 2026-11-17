@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;;; fleury-theme.el --- The fleury color theme
 
 ;; Copyright (C) 2025 Shams Parvez Arka

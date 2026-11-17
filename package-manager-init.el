@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; use standard package manager (package.el)
 (require 'package)
 

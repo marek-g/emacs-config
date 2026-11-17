@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; TODO:
 ;; - ctrl+w ('kill-current-buffer)
 ;; - window management ('split-window-right, 'split-window-below, 'delete-window)

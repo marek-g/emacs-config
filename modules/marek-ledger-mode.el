@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (use-package ledger-mode
   :init
   (setq ledger-reconcile-default-commodity "PLN")

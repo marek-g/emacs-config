@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; ace-window
 (use-package ace-window
   :init

@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;;
 ;; You need to call `M-x dap-cpptools-setup`.
 ;; Then you can open a project and 'M-x dap-edit-debug-template' to set up the template.

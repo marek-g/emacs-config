@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; initilize package manager
 (load (expand-file-name "package-manager-init.el" user-emacs-directory))
 

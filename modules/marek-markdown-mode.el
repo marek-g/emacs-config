@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode) ; gfm-mode - markdown-mode + GitHub Flavored Markdown
   :mode (("\\.md\\'" . gfm-mode)
